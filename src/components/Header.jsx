@@ -4,11 +4,11 @@ const Header = () => {
     return (
         <header>
             <Navbar className="header">
-                <NavbarBrand href="/">React Library</NavbarBrand>
+                <NavbarBrand href="/" className="heading">COMIX</NavbarBrand>
                 <Nav className="ml-auto" navbar>
-                    <NavItem>
+                    {/* <NavItem>
                         <NavLink href="https://github.com/kristenoom/react-fundamentals">GitHub</NavLink>
-                    </NavItem>
+                    </NavItem> */}
                 </Nav>
             </Navbar>
         </header>

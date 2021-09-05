@@ -1,14 +1,16 @@
 import { Route, Link, Switch } from "react-router-dom";
 import Home from './Home';
-import Resources from './Resources';
-import FunctionalComponentDemo from '../concepts/FunctionalComponentDemo';
-import JSXRules from '../concepts/JSXRules';
-import State from '../concepts/State';
-import Effects from '../concepts/Effects';
-import PropsDemo from '../concepts/PropsDemo';
-import Hooks from '../concepts/Hooks';
-import TimePiecesApp from '../apps/timer-apps/TimePiecesApp';
-import NytApp from '../apps/nyt-app/NytApp';
+import Comix from './Comix';
+import Wishlist from './Wishlist';
+// import Resources from './Resources';
+// import FunctionalComponentDemo from '../concepts/FunctionalComponentDemo';
+// import JSXRules from '../concepts/JSXRules';
+// import State from '../concepts/State';
+// import Effects from '../concepts/Effects';
+// import PropsDemo from '../concepts/PropsDemo';
+// import Hooks from '../concepts/Hooks';
+// import TimePiecesApp from '../apps/timer-apps/TimePiecesApp';
+// import NytApp from '../apps/nyt-app/NytApp';
 
 const Sidebar = () => {
     return (

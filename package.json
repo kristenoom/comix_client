@@ -1,5 +1,5 @@
 {
-    "name": "comix-server",
+    "name": "comix-client",
     "version": "0.1.0",
     "private": true,
     "dependencies": {
