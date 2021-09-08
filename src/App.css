@@ -1,10 +1,18 @@
+:root {
+  --C: #00FFFF;
+  --M: #FF00FF;
+  --Y: #FFFF00;
+  --K: #000;
+  
+}
+
 /* FONTS */
 @import url('https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=Just+Another+Hand&display=swap');
 
 .heading, li {
   font-family: 'Just Another Hand', 'Covered By Your Grace', cursive;
   text-transform: uppercase;
-  color: black;
+  color: var(--K);
 }
 
 h1 {
@@ -17,16 +25,16 @@ li {
 
 .text {
   font-family: Arial, Helvetica, sans-serif;
-  color: black;
+  color: var(--K);
 }
 
 /* MAIN */
 .header {
-  background-color: magenta;
+  background-color: var(--M); /* MAGENTA */
 }
 
 .sidebar {
-  background-color: cyan;
+  background-color: var(--C);  /* CYAN */
   color: white;
   display: flex;
   padding-top: 10px;
@@ -36,8 +44,8 @@ li {
 }
 
 .footer {
-  background-color: yellow;
-  color: black;
+  background-color: var(--Y); /* YELLOW */
+  color: var(--K);
   font-size: 12px;
   position: fixed;
   left: 0px;
