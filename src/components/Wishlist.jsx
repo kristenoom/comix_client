@@ -1,4 +1,5 @@
 //import {Link} from "react-router-dom";
+import {Table} from 'reactstrap';
 
 const Wishlist = () => {
     return (
@@ -8,12 +9,12 @@ const Wishlist = () => {
                 <p className="text">Add a comic book to your wishlist here.</p>
                 {/* insert form here */}
                 <br />
-                <table className="text" width="600px" maxWidth="1000px">
+                <Table className="text" width="600px" maxWidth="1000px" striped>
                     <thead>
                         <tr>
-                            <td width="60%"><strong>Title</strong></td>
-                            <td width="30%" align="center"><strong>Issue Date</strong></td>
-                            <td width="10%" align="center"><strong>Want</strong></td>
+                            <th width="60%">Title</th>
+                            <th width="30%" align="center">Issue Date</th>
+                            <th width="10%" align="center">Want</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -23,7 +24,7 @@ const Wishlist = () => {
                             <td width="10%" align="center">✔️</td>
                         </tr>
                     </tbody>
-                </table>
+                </Table>
             </div>
         </div>
     )

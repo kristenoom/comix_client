@@ -1,4 +1,5 @@
 //import {Link} from "react-router-dom";
+import {Table} from 'reactstrap';
 
 const Comix = () => {
     return (
@@ -8,13 +9,13 @@ const Comix = () => {
                 <p className="text">Add a comic book to your reading list here.</p>
                 {/* insert form here */}
                 <br />
-                <table className="text" width="600px" maxWidth="1000px">
+                <Table className="text" width="600px" maxWidth="1000px" striped>
                     <thead>
                         <tr>
                             {/* <td width="10%" align="center">Cover Art</td> */}
-                            <td width="60%"><strong>Title</strong></td>
-                            <td width="30%" align="center"><strong>Issue Date</strong></td>
-                            <td width="10%" align="center"><strong>Have Read</strong></td>
+                            <th width="60%">Title</th>
+                            <th width="30%" align="center">Issue Date</th>
+                            <th width="10%" align="center">Have Read</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -24,7 +25,7 @@ const Comix = () => {
                             <td width="10%" align="center">✔️</td>
                         </tr>
                     </tbody>
-                </table>
+                </Table>
             </div>
         </div>
     )
