@@ -1,7 +1,7 @@
 import { Navbar, NavbarBrand, Nav } from "reactstrap";
 //import { NavItem, NavLink } from "reactstrap";
 
-const Header = () => {
+const Header = (props) => {
     return (
         <header>
             <Navbar className="header">

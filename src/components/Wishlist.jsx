@@ -1,7 +1,7 @@
 //import {Link} from "react-router-dom";
 import {Table} from 'reactstrap';
 
-const Wishlist = () => {
+const Wishlist = (props) => {
     return (
         <div className="main">
             <div className="mainDiv">

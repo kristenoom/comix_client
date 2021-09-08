@@ -12,7 +12,7 @@ import Wishlist from './Wishlist';
 // import TimePiecesApp from '../apps/timer-apps/TimePiecesApp';
 // import NytApp from '../apps/nyt-app/NytApp';
 
-const Sidebar = () => {
+const Sidebar = (props) => {
     return (
         <div className="sidebar">
             <div className='sidebar-list-styling'>

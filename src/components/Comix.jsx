@@ -1,7 +1,7 @@
 //import {Link} from "react-router-dom";
 import {Table} from 'reactstrap';
 
-const Comix = () => {
+const Comix = (props) => {
     return (
         <div className="main">
             <div className="mainDiv">

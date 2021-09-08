@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import HomeChild from './HomeChild';
 import {CardColumns} from 'reactstrap';
 
-const Home = () => {
+const Home = (props) => {
     const [results, setResults] = useState([]);
 
     const resource = `issues`;

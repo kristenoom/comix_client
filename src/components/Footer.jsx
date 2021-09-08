@@ -1,6 +1,6 @@
 //import {Row} from "reactstrap";
 
-const Footer = () => {
+const Footer = (props) => {
     return (
         <footer className="footer">
                 <p>&copy; Comix 2021<br />
