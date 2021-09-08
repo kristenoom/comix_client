@@ -1,12 +1,11 @@
-import {Row} from "reactstrap";
+//import {Row} from "reactstrap";
 
 const Footer = () => {
     return (
-        <footer>
-            <Row>
-                <p>&copy; Comix 2021</p>
-                <p>Site created by Team Happy</p>
-            </Row>
+        <footer className="footer">
+                <p>&copy; Comix 2021<br />
+                Site created by Team Happy</p>
+                <p className="dataSource">Data provided by Gamespot, A Red Ventures Company</p>
         </footer>
     )
 };

@@ -26,12 +26,13 @@ const Home = () => {
 
     return (
         <div className="main">
-            <h1>What will you discover?</h1>
+            <div className="mainDiv">
+            <h1 className="heading">What will you discover?</h1>
 
             <CardColumns>
                 {displayComics()}
             </CardColumns>
-
+            </div>
         </div>
     )
 };

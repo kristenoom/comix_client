@@ -7,7 +7,7 @@ const HomeChild = (props) => {
     const {name, description, image, id, cover_date, issue_number} = props.comic;
 
     return (
-        <div className="main">
+        <div>
             <Card>
                 <CardImg top width="50%" src={image} alt={name} />
                 <CardBody>
