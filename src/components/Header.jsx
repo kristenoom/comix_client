@@ -1,10 +1,11 @@
-import { Navbar, NavbarBrand, Nav, NavItem, NavLink } from "reactstrap";
+import { Navbar, NavbarBrand, Nav } from "reactstrap";
+//import { NavItem, NavLink } from "reactstrap";
 
-const Header = () => {
+const Header = (props) => {
     return (
         <header>
             <Navbar className="header">
-                <NavbarBrand href="/" className="heading">COMIX</NavbarBrand>
+                <NavbarBrand href="/" className="heading"><h1>COMIX</h1></NavbarBrand>
                 <Nav className="ml-auto" navbar>
                     {/* <NavItem>
                         <NavLink href="https://github.com/kristenoom/react-fundamentals">GitHub</NavLink>
