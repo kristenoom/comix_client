@@ -2,15 +2,7 @@ import { Route, Link, Switch } from "react-router-dom";
 import Home from './Home';
 import Comix from './Comix';
 import Wishlist from './Wishlist';
-// import Resources from './Resources';
-// import FunctionalComponentDemo from '../concepts/FunctionalComponentDemo';
-// import JSXRules from '../concepts/JSXRules';
-// import State from '../concepts/State';
-// import Effects from '../concepts/Effects';
-// import PropsDemo from '../concepts/PropsDemo';
-// import Hooks from '../concepts/Hooks';
-// import TimePiecesApp from '../apps/timer-apps/TimePiecesApp';
-// import NytApp from '../apps/nyt-app/NytApp';
+import Auth from '../auth/Auth';
 
 const Sidebar = (props) => {
     return (
@@ -18,6 +10,7 @@ const Sidebar = (props) => {
             <div className='sidebar-list-styling'>
                 <ul className='sidebar-list list-unstyled'>
                     <li><Link to='/'>Home</Link></li>
+                    <li><Link to='/auth'>Sign-Up / Login</Link></li>
                     <li><Link to='/comix'>Comic Book Log</Link></li>
                     <li><Link to='/wishlist'>Wishlist</Link></li>
                 </ul>
@@ -28,6 +21,7 @@ const Sidebar = (props) => {
                     <Route exact path='/comix'><Comix /></Route>
                     <Route exact path='/'><Home /></Route>
                     <Route exact path='/wishlist'><Wishlist /></Route>
+                    <Route exact path='/auth'><Auth /></Route>
                 </Switch>
             </div>
         </div>
