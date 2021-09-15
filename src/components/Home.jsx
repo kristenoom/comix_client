@@ -6,7 +6,7 @@ const Home = (props) => {
     const [results, setResults] = useState([]);
 
     const resource = `issues`;
-    const api_key = `fd2fa4883d09424b39194fa5540f7f8ce9bac4e0`;
+    const api_key = `13c206af9980bdd5498672497394fae658afdaec`;
     const url = `http://comicvine.gamespot.com/api/${resource}/?api_key=${api_key}&format=json&sort=cover_date:asc`;
 
     const fetchURL = async() => {
@@ -20,7 +20,7 @@ const Home = (props) => {
 
     useEffect(() => {
         fetchURL();
-    });
+    },[]);
 
     const displayComics = () => results.map((comic) => <HomeChild key={comic.id} comic={comic} />);
 
