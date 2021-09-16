@@ -23,7 +23,7 @@ const ComicTable = (props) => {
     };
 
     const deleteComic = (comic) => {
-        fetch(`http://localhost:3000/log/${comic.id}`, {
+        fetch(`http://localhost:3000/comic/delete/${comic.id}`, {
             method: 'DELETE',
             headers: new Headers({
                 'Content-Type': 'application/json',
