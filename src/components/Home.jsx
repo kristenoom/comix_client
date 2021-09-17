@@ -7,7 +7,7 @@ const Home = (props) => {
 
     const resource = `issues`;
     const api_key = `13c206af9980bdd5498672497394fae658afdaec`;
-    const url = `http://comicvine.gamespot.com/api/${resource}/?api_key=${api_key}&format=json&sort=cover_date:asc`;
+    const url = `https://comicvine.gamespot.com/api/${resource}/?api_key=${api_key}&format=json&filter=image:original_url&sort=cover_date:asc`;
 
     const fetchURL = async() => {
         const response = await fetch(url);
