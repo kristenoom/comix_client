@@ -36,7 +36,6 @@ const ComicTable = (props) => {
     return (
         <>
         <h3>Comic History</h3>
-        <hr/>
         <Table striped>
             <thread>
                 <tr>
