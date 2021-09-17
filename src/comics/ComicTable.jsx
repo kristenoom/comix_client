@@ -1,7 +1,26 @@
 import React from 'react';
-import { Button } from 'reactstrap';
+import { Table, Button } from 'reactstrap';
 
 const ComicTable = (props) => {
+
+    const comicMapper = () => {
+        return props.comic.map((comic, index) => {
+            return (
+                <tr key={index}>
+                    <th scope="row">{comicMapper.name}</th>
+                    <td>{comicMapper.id}</td>
+                    <td>{comicMapper.issue_number}</td>
+                    <td>{comicMapper.cover_date}</td>
+                    <td>{comicMapper.read}</td>
+                    <td>{comicMapper.owned}</td>
+                    <td>
+                        <Button color="warning" onClick={() => { props.editUpdateComic(comic); props.updateOn() }}>Update</Button>
+                        <Button color="danger" onClick={() => { deleteComic(comic) }}>Delete</Button>
+                    </td>
+                </tr>
+            )
+        })
+    };
 
     const deleteComic = (comic) => {
         fetch(`http://localhost:3000/comic/delete/${comic.id}`, {
@@ -11,32 +30,12 @@ const ComicTable = (props) => {
                 'Authorization': props.token
             })
         })
-        .then(() => props.fetchComic())
-    }
-
-    const comicMapper = () => {
-        return props.comic.map((comic, index) => {
-            return (
-                <tr key={index}>
-                    <th scope="row">{comic.name}</th>
-                    <td>{comic.id}</td>
-                    <td>{comic.issue_number}</td>
-                    <td>{comic.cover_date}</td>
-                    <td>{comic.read}</td>
-                    <td>{comic.owned}</td>
-                    <td>
-                        <Button color="warning" onClick={() => {props.editUpdateComic(comic); props.updateOn()}}>Update</Button>
-                        <Button color="danger" onClick={() => {deleteComic(comic)}}>Delete</Button>
-                    </td>
-                </tr>
-            )
-        })
-    }
+            .then(() => props.fetchComic())
+    };
 
     return (
         <>
-        <h3>Workout History</h3>
-        <hr/>
+        <h3>Comic History</h3>
         <Table striped>
             <thread>
                 <tr>

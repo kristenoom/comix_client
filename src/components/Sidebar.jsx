@@ -10,7 +10,7 @@ const Sidebar = (props) => {
             <div className='sidebar-list-styling'>
                 <ul className='sidebar-list list-unstyled'>
                     <li><Link to='/'>Home</Link></li>
-                    <li><Link to='/auth'>Sign-Up / Login</Link></li>
+                    {/* <li><Link to='/auth'>Sign-Up / Login</Link></li> */}
                     <li><Link to='/comix'>Comic Book Log</Link></li>
                     <li><Link to='/wishlist'>Wishlist</Link></li>
                 </ul>
@@ -21,7 +21,7 @@ const Sidebar = (props) => {
                     <Route exact path='/comix'><Comix /></Route>
                     <Route exact path='/'><Home /></Route>
                     <Route exact path='/wishlist'><Wishlist /></Route>
-                    <Route exact path='/auth'><Auth /></Route>
+                    {/* <Route exact path='/auth'><Auth /></Route> */}
                 </Switch>
             </div>
         </div>

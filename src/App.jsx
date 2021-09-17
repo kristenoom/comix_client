@@ -32,7 +32,7 @@ const App = () => {
             <Router>
                 <Sidebar />
             </Router>
-            {/* <Sitebar /> */}
+            <Auth updateToken={updateToken} />
             <Footer />
         </div>
     );

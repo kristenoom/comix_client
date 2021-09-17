@@ -15,7 +15,15 @@ const ComicCreate = (props) => {
         e.preventDefault();
         fetch('http://localhost:3000/comic/', {
             method: 'POST',
-            body: JSON.stringify({comic: {name: name, description: description, id: id, cover_date: cover_date, issue_number: issue_number}}),
+            body: JSON.stringify({
+                comic: {
+                    name: name,
+                    description: description,
+                    id: id,
+                    cover_date: cover_date,
+                    issue_number: issue_number
+                }
+            }),
             headers: new Headers({
                 'Content-Type': 'application/json',
                 'Authorization': props.token
@@ -72,7 +80,7 @@ const ComicCreate = (props) => {
                         <Label htmlFor="image" />
                         <Input name="image" value={image} onChange={(e) => setImage(e.target.value)}/>
                     </FormGroup> */}
-                    <Button type="submit">Click to Add Comic</Button>
+                    <Button type="submit">Add Comic</Button>
                 </Form>
             </>
     )
