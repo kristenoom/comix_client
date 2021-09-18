@@ -28,9 +28,9 @@ const ComicEdit = (props) => {
 
     return (
         <Modal isOpen={true}>
-            <ModalHeader>Some Title Thing</ModalHeader>
+            <ModalHeader>Comics Log</ModalHeader>
             <ModalBody>
-            <Form onSubmit={comicUpdate}>
+                <Form onSubmit={comicUpdate}>
                     <FormGroup>
                         <Label htmlFor="name">Edit Name:</Label>
                         <Input name="name" value={editName} onChange={(e) => setEditName(e.target.value)} />
