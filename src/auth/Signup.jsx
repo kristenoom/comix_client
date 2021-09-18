@@ -26,11 +26,11 @@ const Signup = (props) => {
             <Form>
                 <FormGroup>
                     <Label htmlFor="username">Username</Label>
-                    <Input name="username" value={username}/>
+                    <Input onChange={(e) => setUsername(e.target.value)} name="username" value={username}/>
                 </FormGroup>
                 <FormGroup>
                     <Label htmlFor="password">Password</Label>
-                    <Input name="password" value={password}/>
+                    <Input onChange={(e) => setPassword(e.target.value)} name="password" value={password}/>
                 </FormGroup>
                 <Button type="submit">Welcome</Button>
             </Form>

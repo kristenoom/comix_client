@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import { Button, Form, FormGroup, Label, Input, Modal, ModalHeader, ModalBody } from 'reactstrap';
 
 const ComicEdit = (props) => {
-    const [editName, setEditName] = useState(comicToUpdate.name);
-    const [editId, setEditId] = useState(comicToUpdate.id);
-    const [editIssue_number, setEditIssue_Number] = useState(comicToUpdate.issue_number);
-    const [editCover_date, setEditCover_Date] = useState(comicToUpdate.cover_date);
-    const [editRead, setEditRead] = useState(comicToUpdate.read);
-    const [editOwned, setEditOwned] = useState(comicToUpdate.owned);
+    const [editName, setEditName] = useState(props.comicToUpdate.name);
+    const [editId, setEditId] = useState(props.comicToUpdate.id);
+    const [editIssue_number, setEditIssue_Number] = useState(props.comicToUpdate.issue_number);
+    const [editCover_date, setEditCover_Date] = useState(props.comicToUpdate.cover_date);
+    const [editRead, setEditRead] = useState(props.comicToUpdate.read);
+    const [editOwned, setEditOwned] = useState(props.comicToUpdate.owned);
 
     console.log(props.token);
 

@@ -26,14 +26,14 @@ const Login = (props) => {
         return(
             <div>
                 <h1>Login</h1>
-                <Form>
+                <Form onSubmit={handleSubmit}>
                     <FormGroup controlId="Username" bsSize="small">
                         <Label htmlFor="username">Username</Label>
-                        <Input name="username" value={username}/>
+                        <Input onChange={(e) => setUsername(e.target.value)} name="username" value={username}/>
                     </FormGroup>
                     <FormGroup controlId="Password" bsSize="medium">
                         <Label htmlFor="password">Password</Label>
-                        <Input name="password" value={password}/>
+                        <Input onChange={(e) => setPassword(e.target.value)} name="password" value={password}/>
                     </FormGroup>
                     <Button type="submit">Login</Button>
                 </Form>
