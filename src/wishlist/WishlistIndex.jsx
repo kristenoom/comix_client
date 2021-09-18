@@ -44,8 +44,10 @@ const WishlistIndex = (props) => {
     return (
         <Container>
             <Row>
-                <h1 className="heading">Wishlist</h1>
-                <p className="text">Add a comic book to your wishlist here.</p>
+                <Col md="12">
+                    <h1 className="heading">Wishlist</h1>
+                    <p className="text">Add a comic book to your wishlist here.</p>
+                </Col>
             </Row>
             <Row>
                 <Col md="4">

@@ -60,7 +60,7 @@ const ComicCreate = (props) => {
                     </FormGroup>
                     <FormGroup>
                         <Label htmlFor="cover_date" />
-                        <Input name="cover_date" value={cover_date} onChange={(e) => setCover_Date(e.target.value)}/>
+                        <Input name="cover_date" type="date" value={cover_date} onChange={(e) => setCover_Date(e.target.value)}/>
                     </FormGroup>
                     <FormGroup>
                         <Label htmlFor="read" />
