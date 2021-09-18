@@ -4,8 +4,8 @@ import './App.css';
 import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 import Footer from './components/Footer';
+import Auth from './auth/Auth';
 //import Sitebar from './components/site/Header';
-
 
 import { BrowserRouter as Router } from 'react-router-dom';
 
