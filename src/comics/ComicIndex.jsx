@@ -44,6 +44,12 @@ const ComicIndex = (props) => {
     return (
         <Container>
             <Row>
+                <Col md="12">
+                    <h1 className="heading">Comic Book Log</h1>
+                    <p className="text">Add a comic book to your reading list here.</p>
+                </Col>
+            </Row>
+            <Row>
                 <Col md="3">
                     <ComicCreate fetchComics={fetchComics} token={props.token} />
                 </Col>
