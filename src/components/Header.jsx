@@ -18,7 +18,7 @@ const Header = (props) => {
                 <Collapse isOpen={isOpen} navbar>
                     <Nav className="ml-auto" navbar>
                         <NavItem>
-                            <Button onClick={props.clickLogout}>Logout</Button>
+                            <Button onClick={props.clickLogout} color="dark">Logout</Button>
                         </NavItem>
                     </Nav>
                 </Collapse>

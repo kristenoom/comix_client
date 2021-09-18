@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import { Button, Form, FormGroup, Label, Input, Modal, ModalHeader, ModalBody } from 'reactstrap';
 
 const ComicEdit = (props) => {
-    const [editName, setEditName] = useState(comicToUpdate.name);
-    const [editId, setEditId] = useState(comicToUpdate.id);
-    const [editIssue_number, setEditIssue_Number] = useState(comicToUpdate.issue_number);
-    const [editCover_date, setEditCover_Date] = useState(comicToUpdate.cover_date);
-    const [editRead, setEditRead] = useState(comicToUpdate.read);
-    const [editOwned, setEditOwned] = useState(comicToUpdate.owned);
+    const [editName, setEditName] = useState(props.comicToUpdate.name);
+    const [editId, setEditId] = useState(props.comicToUpdate.id);
+    const [editIssue_number, setEditIssue_Number] = useState(props.comicToUpdate.issue_number);
+    const [editCover_date, setEditCover_Date] = useState(props.comicToUpdate.cover_date);
+    const [editRead, setEditRead] = useState(props.comicToUpdate.read);
+    const [editOwned, setEditOwned] = useState(props.comicToUpdate.owned);
 
     console.log(props.token);
 
@@ -15,7 +15,16 @@ const ComicEdit = (props) => {
         event.preventDefault();
         fetch(`http://localhost:3000/comic/${props.comicToUpdate.id}`, {
             method: 'PUT',
-            body: JSON.stringify({ comic: {name: editName, id: editId, issue_number: editIssue_number, cover_date: editCover_date, read: editRead, owned: editOwned} }),
+            body: JSON.stringify({
+                comic: {
+                    name: editName,
+                    id: editId,
+                    issue_number: editIssue_number,
+                    cover_date: editCover_date,
+                    read: editRead,
+                    owned: editOwned
+                }
+            }),
             headers: new Headers({
                 'Content-Type': 'application/json',
                 'Authorization': props.token
@@ -28,7 +37,7 @@ const ComicEdit = (props) => {
 
     return (
         <Modal isOpen={true}>
-            <ModalHeader>Comics Log</ModalHeader>
+            <ModalHeader>Log Your Comic</ModalHeader>
             <ModalBody>
                 <Form onSubmit={comicUpdate}>
                     <FormGroup>
@@ -61,7 +70,7 @@ const ComicEdit = (props) => {
                         <option value="Owned">Owned</option>
                         <option value="Unowned">Unowned</option>
                     </FormGroup>
-                    <Button type="submit">Update the Comic!</Button>
+                    <Button type="submit" color="success">Update</Button>
                 </Form>
             </ModalBody>
         </Modal>

@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import { Button, Form, FormGroup, Label, Input, Modal, ModalHeader, ModalBody } from 'reactstrap';
 
 const WishlistEdit = (props) => {
-    const [editName, setEditName] = useState(wishlistToUpdate.name);
-    const [editId, setEditId] = useState(wishlistToUpdate.id);
-    const [editIssue_number, setEditIssue_Number] = useState(wishlistToUpdate.issue_number);
-    const [editCover_date, setEditCover_Date] = useState(wishlistToUpdate.cover_date);
-    const [editRead, setEditRead] = useState(wishlistToUpdate.read);
-    const [editOwned, setEditOwned] = useState(wishlistToUpdate.owned);
+    const [editName, setEditName] = useState(props.wishlistToUpdate.name);
+    // const [editId, setEditId] = useState(props.wishlistToUpdate.id);
+    // const [editIssue_number, setEditIssue_Number] = useState(props.wishlistToUpdate.issue_number);
+    // const [editCover_date, setEditCover_Date] = useState(props.wishlistToUpdate.cover_date);
+    // const [editRead, setEditRead] = useState(props.wishlistToUpdate.read);
+    // const [editOwned, setEditOwned] = useState(props.wishlistToUpdate.owned);
 
     console.log(props.token);
 

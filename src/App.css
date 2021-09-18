@@ -28,6 +28,12 @@ li {
   color: var(--K);
 }
 
+button,
+Button {
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+
 /* MAIN */
 .header {
   background-color: var(--M); /* MAGENTA */

@@ -8,10 +8,10 @@ const Auth = (props) => {
         <Container className='master-container'>
             <Row>
                 <Col md='5'>
-                   <Signup/>
+                   <Signup />
                 </Col>
                 <Col md='4'>
-                    <Login/>
+                    <Login />
                 </Col>
             </Row>
         </Container>
