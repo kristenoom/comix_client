@@ -2,9 +2,7 @@ import React, {useState, useEffect} from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import ComicCreate from './ComicCreate';
 import ComicTable from './ComicTable';
-// import ComicCreate from './ComicCreate'
-// import ComicTable from './ComicTable'
-// import ComicEdit from './ComicEdit'
+import ComicEdit from './ComicEdit'
 
 const ComicIndex = (props) => {
     const [comics, setComics] = useState([]);
