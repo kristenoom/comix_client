@@ -60,15 +60,15 @@ const ComicEdit = (props) => {
                         <Label htmlFor="read">Edit Read Status:</Label>
                         <Input type="select" name="read" value={editRead} onChange={(e) => setEditRead(e.target.value)}/>
                         <option></option>
-                        <option value="Read">Read</option>
-                        <option value="Unread">Unread</option>
+                        <option value="true">Read</option>
+                        <option value="false">Unread</option>
                     </FormGroup>
                     <FormGroup>
                         <Label htmlFor="owned">Edit Owned Status:</Label>
                         <Input type="select" name="owned" value={editOwned} onChange={(e) => setEditOwned(e.target.value)}/>
                         <option></option>
-                        <option value="Owned">Owned</option>
-                        <option value="Unowned">Unowned</option>
+                        <option value="true">Owned</option>
+                        <option value="false">Unowned</option>
                     </FormGroup>
                     <Button type="submit" color="success">Update</Button>
                 </Form>

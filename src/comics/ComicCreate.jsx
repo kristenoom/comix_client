@@ -66,21 +66,21 @@ const ComicCreate = (props) => {
                         <Label htmlFor="read" />
                         <Input type="select" name="read" value={read} onChange={(e) => setRead(e.target.value)}/>
                         <option></option>
-                        <option value="Read">Read</option>
-                        <option value="Unread">Unread</option>
+                        <option value="true">Read</option>
+                        <option value="false">Unread</option>
                     </FormGroup>
                     <FormGroup>
                         <Label htmlFor="owned" />
                         <Input type="select" name="owned" value={owned} onChange={(e) => setOwned(e.target.value)}/>
                         <option></option>
-                        <option value="Owned">Owned</option>
-                        <option value="Unowned">Unowned</option>
+                        <option value="true">Owned</option>
+                        <option value="false">Unowned</option>
                     </FormGroup>
                     {/* <FormGroup>
                         <Label htmlFor="image" />
                         <Input name="image" value={image} onChange={(e) => setImage(e.target.value)}/>
                     </FormGroup> */}
-                    <Button type="submit">Add Comic</Button>
+                    <Button type="submit">Add +</Button>
                 </Form>
             </>
     )
