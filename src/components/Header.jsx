@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, Button } from 'reactstrap';
+import Sidebar from './Sidebar';
 
 const Header = (props) => {
 
@@ -14,6 +15,9 @@ const Header = (props) => {
         <header>
             <Navbar className="header">
                 <NavbarBrand href="/" className="heading"><h1>COMIX</h1></NavbarBrand>
+                <Router>
+                    <Sidebar />
+                </Router>
                 <NavbarToggler onClick={toggle} />
                 <Collapse isOpen={isOpen} navbar>
                     <Nav className="ml-auto" navbar>

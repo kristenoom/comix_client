@@ -19,8 +19,13 @@ h1 {
   font-size: 64px;
 }
 
+ul {
+  display: inline;
+}
+
 li {
   font-size: 24px;
+  display: inline;
 }
 
 .text {
