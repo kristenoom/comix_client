@@ -9,7 +9,6 @@ import {
   ModalHeader,
   ModalBody,
 } from "reactstrap";
-
 const WishlistEdit = (props) => {
   const [editName, setEditName] = useState(props.wishlistToUpdate.name);
   // const [editId, setEditId] = useState(props.wishlistToUpdate.id);
@@ -17,9 +16,7 @@ const WishlistEdit = (props) => {
   // const [editCover_date, setEditCover_Date] = useState(props.wishlistToUpdate.cover_date);
   // const [editRead, setEditRead] = useState(props.wishlistToUpdate.read);
   // const [editOwned, setEditOwned] = useState(props.wishlistToUpdate.owned);
-
   console.log(props.token);
-
   const wishlistUpdate = (event, wishlist) => {
     event.preventDefault();
     fetch(`http://localhost:3000/wishlist/${props.wishlistToUpdate.id}`, {
@@ -43,7 +40,6 @@ const WishlistEdit = (props) => {
       props.updateOff();
     });
   };
-
   return (
     <Modal isOpen={true}>
       <ModalHeader>Wishlist Log</ModalHeader>
@@ -89,5 +85,4 @@ const WishlistEdit = (props) => {
     </Modal>
   );
 };
-
 export default WishlistEdit;

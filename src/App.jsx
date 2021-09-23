@@ -4,7 +4,8 @@ import './App.css';
 import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 import Footer from './components/Footer';
-import Auth from './auth/Auth';
+import Auth from './auth/Auth'
+
 
 import { BrowserRouter as Router } from 'react-router-dom';
 
@@ -29,7 +30,7 @@ const App = () => {
         <div className="App">
             <Header />
             <Router>
-                <Sidebar />
+                <Sidebar/>
             </Router>
             <Auth updateToken={updateToken} />
             <Footer />
