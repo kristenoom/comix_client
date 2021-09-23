@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
 import Auth from './auth/Auth';
 import Header from './components/Header';
-//import Sidebar from './components/Sidebar';
+import Sidebar from './components/Sidebar';
 import Footer from './components/Footer';
 
 //import Sitebar from './components/site/Header';
@@ -30,10 +30,10 @@ const App = () => {
     return (
         <div className="App">
             <Header />
-            {/* <Router>
-                <Sidebar />
-            </Router> */}
-            <Auth updateToken={updateToken} />
+            <Router>
+                <Sidebar updateToken={updateToken} />
+            </Router>
+            {/* <Auth updateToken={updateToken} /> */}
             <Footer />
         </div>
     );
