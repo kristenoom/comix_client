@@ -1,8 +1,9 @@
 import React, {useState, useEffect} from 'react';
 import { Container, Row, Col } from 'reactstrap';
-import WishlistCreate from './WishlistCreate'
-import WishlistTable from './WishlistTable'
-import WishlistEdit from './WishlistEdit'
+import WishlistCreate from './WishlistCreate';
+import WishlistTable from './WishlistTable';
+import WishlistEdit from './WishlistEdit';
+
 const WishlistIndex = (props) => {
     const [wishlists, setWishlists] = useState([]);
     const [updateActive, setUpdateActive] = useState(false);

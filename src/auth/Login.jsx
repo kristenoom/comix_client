@@ -6,8 +6,8 @@ const Login = (props) => {
     const [password, setPassword] = useState('');
 
         
-    const handleSubmit = (event) => {
-        event.preventDefault();
+    const handleSubmit = (e) => {
+        e.preventDefault();
         fetch(`http://localhost:3000/user/login`, {
             method: "POST",
             body: JSON.stringify({
@@ -23,28 +23,22 @@ const Login = (props) => {
             });
     };
 
-
-
-
-
-
         return(
             <div>
                 <h1 className="heading">Login</h1>
                 <Form onSubmit={handleSubmit}>
                     <FormGroup controlId="Username" bsSize="small">
                         <Label htmlFor="username">Username</Label>
-                        <Input onChange={(event) => setUsername(event.target.value)} name="username" value={username}/>
+                        <Input onChange={(e) => setUsername(e.target.value)} name="username" value={username}/>
                     </FormGroup>
                     <FormGroup>
                         <Label htmlFor="password">Password</Label>
-                        <Input onChange={(event) => setPassword(event.target.value)} name="password" value={password}/>
+                        <Input onChange={(e) => setPassword(e.target.value)} name="password" value={password}/>
                     </FormGroup>
                     <Button type="submit" color="success">Login</Button>
                 </Form>
             </div>
         )
 }
-
 
 export default Login

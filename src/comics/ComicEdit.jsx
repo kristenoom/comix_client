@@ -11,11 +11,20 @@ const ComicEdit = (props) => {
 
     console.log(props.token);
 
-    const comicUpdate = (event, comic) => {
-        event.preventDefault();
+    const comicUpdate = (e, comic) => {
+        e.preventDefault();
         fetch(`http://localhost:3000/comic/${props.comicToUpdate.id}`, {
             method: 'PUT',
-            body: JSON.stringify({ comic: {name: editName, id: editId, issue_number: editIssue_number, cover_date: editCover_date, read: editRead, owned: editOwned} }),
+            body: JSON.stringify({
+                comic: {
+                    name: editName,
+                    id: editId,
+                    issue_number: editIssue_number,
+                    cover_date: editCover_date,
+                    read: editRead,
+                    owned: editOwned
+                }
+            }),
             headers: new Headers({
                 'Content-Type': 'application/json',
                 'Authorization': props.token
@@ -28,7 +37,7 @@ const ComicEdit = (props) => {
 
     return (
         <Modal isOpen={true}>
-            <ModalHeader>Comics Log</ModalHeader>
+            <ModalHeader>Log Your Comic</ModalHeader>
             <ModalBody>
                 <Form onSubmit={comicUpdate}>
                     <FormGroup>
@@ -51,17 +60,17 @@ const ComicEdit = (props) => {
                         <Label htmlFor="read">Edit Read Status:</Label>
                         <Input type="select" name="read" value={editRead} onChange={(e) => setEditRead(e.target.value)}/>
                         <option></option>
-                        <option value="Read">Read</option>
-                        <option value="Unread">Unread</option>
+                        <option value="true">Read</option>
+                        <option value="false">Unread</option>
                     </FormGroup>
                     <FormGroup>
                         <Label htmlFor="owned">Edit Owned Status:</Label>
                         <Input type="select" name="owned" value={editOwned} onChange={(e) => setEditOwned(e.target.value)}/>
                         <option></option>
-                        <option value="Owned">Owned</option>
-                        <option value="Unowned">Unowned</option>
+                        <option value="true">Owned</option>
+                        <option value="false">Unowned</option>
                     </FormGroup>
-                    <Button type="submit">Update the Comic!</Button>
+                    <Button type="submit" color="success">Update</Button>
                 </Form>
             </ModalBody>
         </Modal>

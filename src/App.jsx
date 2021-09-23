@@ -6,9 +6,7 @@ import Sidebar from './components/Sidebar';
 import Footer from './components/Footer';
 import Auth from './auth/Auth'
 
-
 import { BrowserRouter as Router } from 'react-router-dom';
-
 
 const App = () => {
     const [sessionToken, setSessionToken] = useState('');
@@ -25,14 +23,13 @@ const App = () => {
         console.log(sessionToken);
     }
 
-
     return (
         <div className="App">
             <Header />
             <Router>
-                <Sidebar/>
+                <Sidebar updateToken={updateToken} />
             </Router>
-            <Auth updateToken={updateToken} />
+            {/* <Auth updateToken={updateToken} /> */}
             <Footer />
         </div>
     );
