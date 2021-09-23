@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, {useState, useEffect} from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import WishlistCreate from './WishlistCreate';
 import WishlistTable from './WishlistTable';
@@ -8,7 +8,6 @@ const WishlistIndex = (props) => {
     const [wishlists, setWishlists] = useState([]);
     const [updateActive, setUpdateActive] = useState(false);
     const [wishlistToUpdate, setWishlistToUpdate] = useState({});
-
     const fetchWishlists = () => {
         fetch('http://localhost:3000/wishlist', {
             method: 'GET',
@@ -23,24 +22,19 @@ const WishlistIndex = (props) => {
                 console.log(wishlistData)
             })
     };
-
     useEffect(() => {
         fetchWishlists();
     }, []);
-
     const editUpdateWishlist = (wishlist) => {
         setWishlistToUpdate(wishlist);
         console.log(wishlist);
     };
-
     const updateOn = () => {
         setUpdateActive(true);
     };
-
     const updateOff = () => {
         setUpdateActive(false);
     };
-
     return (
         <Container>
             <Row>
@@ -61,5 +55,4 @@ const WishlistIndex = (props) => {
         </Container>
     )
 };
-
 export default WishlistIndex;

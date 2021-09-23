@@ -11,8 +11,8 @@ const ComicEdit = (props) => {
 
     console.log(props.token);
 
-    const comicUpdate = (event, comic) => {
-        event.preventDefault();
+    const comicUpdate = (e, comic) => {
+        e.preventDefault();
         fetch(`http://localhost:3000/comic/${props.comicToUpdate.id}`, {
             method: 'PUT',
             body: JSON.stringify({

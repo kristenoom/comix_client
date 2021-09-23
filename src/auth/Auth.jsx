@@ -8,14 +8,14 @@ const Auth = (props) => {
         <Container className='master-container'>
             <Row>
                 <Col md='5'>
-                   <Signup />
+                   <Signup updateToken={props.updateToken}/>
                 </Col>
                 <Col md='4'>
-                    <Login />
+                    <Login updateToken={props.updateToken}/>
                 </Col>
             </Row>
         </Container>
     )
 }
 
-export default Auth;
+export default Auth

@@ -17,9 +17,6 @@ const Header = (props) => {
         <header>
             <Navbar className="header">
                 <NavbarBrand href="/" className="heading"><h1>COMIXROLL</h1></NavbarBrand>
-                <Router>
-                    <Sidebar />
-                </Router>
                 <NavbarToggler onClick={toggle} />
                 <Collapse isOpen={isOpen} navbar>
                     <Nav className="ml-auto" navbar>
