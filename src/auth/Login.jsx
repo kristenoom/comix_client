@@ -30,9 +30,9 @@ const Login = (props) => {
 
         return(
             <div>
-                <h1>Login</h1>
+                <h1 className="heading">Login</h1>
                 <Form onSubmit={handleSubmit}>
-                    <FormGroup>
+                    <FormGroup controlId="Username" bsSize="small">
                         <Label htmlFor="username">Username</Label>
                         <Input onChange={(event) => setUsername(event.target.value)} name="username" value={username}/>
                     </FormGroup>
@@ -40,7 +40,7 @@ const Login = (props) => {
                         <Label htmlFor="password">Password</Label>
                         <Input onChange={(event) => setPassword(event.target.value)} name="password" value={password}/>
                     </FormGroup>
-                    <Button type="submit">Login</Button>
+                    <Button type="submit" color="success">Login</Button>
                 </Form>
             </div>
         )

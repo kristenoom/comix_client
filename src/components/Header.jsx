@@ -13,7 +13,7 @@ const Header = (props) => {
     return (
         <header>
             <Navbar className="header">
-                <NavbarBrand href="/" className="heading"><h1>COMIX</h1></NavbarBrand>
+                <NavbarBrand href="/" className="heading"><h1>COMIXROLL</h1></NavbarBrand>
                 <NavbarToggler onClick={toggle} />
                 <Collapse isOpen={isOpen} navbar>
                     <Nav className="ml-auto" navbar>
