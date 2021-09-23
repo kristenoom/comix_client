@@ -1,4 +1,4 @@
-import React, {userState, useEffect} from 'react';
+import React, {useState, useEffect} from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import WishlistCreate from './WishlistCreate'
 import WishlistTable from './WishlistTable'
