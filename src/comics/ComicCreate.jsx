@@ -19,7 +19,7 @@ const ComicCreate = (props) => {
                 comic: {
                     name: name,
                     description: description,
-                    id: id,
+                    // id: id,
                     cover_date: cover_date,
                     issue_number: issue_number
                 }
@@ -33,7 +33,7 @@ const ComicCreate = (props) => {
             console.log(data);
             setName('');
             setDescription('');
-            setId('');
+            // setId('');
             setIssue_Number('');
             setCover_Date('');
             setRead('');
@@ -50,12 +50,12 @@ const ComicCreate = (props) => {
                         <Label htmlForm="name" >Title</Label>
                         <Input name="name" value={name} onChange={(e) => setName(e.target.value)} />
                     </FormGroup>
-                    <FormGroup>
+                    {/* <FormGroup>
                         <Label htmlForm="id" />
                         <Input name="id" value={id} onChange={(e) => setId(e.target.value)}/>
-                    </FormGroup>
+                    </FormGroup> */}
                     <FormGroup>
-                        <Label htmlForm="issue_number" >Issue #</Label>
+                        <Label htmlForm="issue_number">Issue #</Label>
                         <Input name="issue_number" value={issue_number} onChange={(e) => setIssue_Number(e.target.value)}/>
                     </FormGroup>
                     <FormGroup>
