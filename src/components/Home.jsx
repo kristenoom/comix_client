@@ -3,7 +3,7 @@ import HomeChild from './HomeChild';
 import {CardColumns} from 'reactstrap';
 
 // const resource = `issues`;
-// const api_key = `fd2fa4883d09424b39194fa5540f7f8ce9bac4e0`;
+// const api_key = `79bf6e691a2ed5ccfcfd437133da355bdd7b0b06`;
 // const baseURL = `http://comicvine.gamespot.com/api`;
 
 const Home = (props) => {
@@ -19,7 +19,7 @@ const Home = (props) => {
         const data = await response.json();
         console.log(data.results);
         setResults(data.results);
-    }
+    };
 
     useEffect(() => {
         fetchResults();
