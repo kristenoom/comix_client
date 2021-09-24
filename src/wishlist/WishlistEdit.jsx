@@ -45,7 +45,7 @@ const WishlistEdit = (props) => {
 
     return (
         <Modal isOpen={true}>
-            <ModalHeader>Wishlist Log</ModalHeader>
+            <ModalHeader>Update Wishlist</ModalHeader>
             <ModalBody>
                 <Form onSubmit={wishlistUpdate}>
                     <FormGroup>

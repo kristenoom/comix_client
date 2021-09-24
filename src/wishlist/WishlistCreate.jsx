@@ -80,7 +80,7 @@ const WishlistCreate = (props) => {
                         <Label htmlFor="image" />
                         <Input name="image" value={image} onChange={(e) => setImage(e.target.value)}/>
                     </FormGroup> */}
-                    <Button type="submit">Add +</Button>
+                    <Button type="submit" color="success">Add +</Button>
                 </Form>
             </>
     )

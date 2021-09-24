@@ -25,7 +25,7 @@ const WishlistIndex = (props) => {
     useEffect(() => {
         fetchWishlists();
     }, []);
-    
+
     const editUpdateWishlist = (wishlist) => {
         setWishlistToUpdate(wishlist);
         console.log(wishlist);
@@ -41,7 +41,7 @@ const WishlistIndex = (props) => {
             <Row>
                 <Col md="12">
                     <h1 className="heading">Wishlist</h1>
-                    <p className="text">Add a comic book to your wishlist here.</p>
+                    <p className="text">Add a comic book/graphic novel to your wishlist here.</p>
                 </Col>
             </Row>
             <Row>

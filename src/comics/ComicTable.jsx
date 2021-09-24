@@ -8,7 +8,7 @@ const ComicTable = (props) => {
             return (
                 <tr key={index}>
                     <th scope="row">{comicMapper.name}</th>
-                    <td>{comicMapper.id}</td>
+                    {/* <td>{comicMapper.id}</td> */}
                     <td>{comicMapper.issue_number}</td>
                     <td>{comicMapper.cover_date}</td>
                     <td>{comicMapper.read}</td>
@@ -40,9 +40,9 @@ const ComicTable = (props) => {
             <thread>
                 <tr>
                     <th>#</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                    <th>Id</th>
+                    <th>Title</th>
+                    {/* <th>Description</th> */}
+                    {/* <th>Id</th> */}
                     <th>Issue Number</th>
                     <th>Cover Date</th>
                     <th>Read</th>

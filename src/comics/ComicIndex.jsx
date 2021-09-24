@@ -45,8 +45,8 @@ const ComicIndex = (props) => {
         <Container>
             <Row>
                 <Col md="12">
-                    <h1 className="heading">Comicbook Log</h1>
-                    <p className="text">Add a comicbook to your logbook here.</p>
+                    <h1 className="heading">Comic Book Log</h1>
+                    <p className="text">Add a comic book/graphic novel to your logbook here.</p>
                 </Col>
             </Row>
             <Row>
