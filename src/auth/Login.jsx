@@ -5,7 +5,6 @@ const Login = (props) => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
 
-        
     const handleSubmit = (e) => {
         e.preventDefault();
         fetch(`http://localhost:3000/user/login`, {
@@ -41,4 +40,4 @@ const Login = (props) => {
         )
 }
 
-export default Login
+export default Login;

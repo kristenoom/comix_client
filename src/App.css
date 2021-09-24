@@ -13,19 +13,20 @@ li {
   font-family: "Just Another Hand", "Covered By Your Grace", cursive;
   text-transform: uppercase;
   color: var(--K);
+  margin-top: 5px;
 }
 
 h1 {
   font-size: 64px;
 }
 
-ul {
+/* ul {
   display: inline;
-}
+} */
 
 li {
   font-size: 24px;
-  display: inline;
+  /* display: inline; */
 }
 
 .text {
@@ -62,7 +63,7 @@ Button {
   left: 0px;
   bottom: 0px;
   height: 100px;
-  width: 100px;
+  width: 100%;
   padding: 15px;
   text-align: center;
 }

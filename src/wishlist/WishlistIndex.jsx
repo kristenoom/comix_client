@@ -25,6 +25,7 @@ const WishlistIndex = (props) => {
     useEffect(() => {
         fetchWishlists();
     }, []);
+    
     const editUpdateWishlist = (wishlist) => {
         setWishlistToUpdate(wishlist);
         console.log(wishlist);

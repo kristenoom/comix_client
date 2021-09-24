@@ -4,7 +4,9 @@ import Login from './Login'
 import Signup from './Signup';
 
 const Auth = (props) => {
-    return(
+    return (
+        <>
+            <br />
         <Container className='master-container'>
             <Row>
                 <Col md='5'>
@@ -14,7 +16,8 @@ const Auth = (props) => {
                     <Login updateToken={props.updateToken}/>
                 </Col>
             </Row>
-        </Container>
+            </Container>
+            </>
     )
 }
 

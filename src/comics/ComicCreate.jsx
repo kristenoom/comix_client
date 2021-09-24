@@ -44,40 +44,40 @@ const ComicCreate = (props) => {
 
     return (
         <>
-            <h3>Add a Comic</h3>
+            {/* <h3>Add a Comic</h3> */}
             <Form onSubmit={handleSubmit}>
                     <FormGroup>
-                        <Label htmlFor="name" />
+                        <Label htmlForm="name" >Title</Label>
                         <Input name="name" value={name} onChange={(e) => setName(e.target.value)} />
                     </FormGroup>
                     <FormGroup>
-                        <Label htmlFor="id" />
+                        <Label htmlForm="id" />
                         <Input name="id" value={id} onChange={(e) => setId(e.target.value)}/>
                     </FormGroup>
                     <FormGroup>
-                        <Label htmlFor="issue_number" />
+                        <Label htmlForm="issue_number" >Issue #</Label>
                         <Input name="issue_number" value={issue_number} onChange={(e) => setIssue_Number(e.target.value)}/>
                     </FormGroup>
                     <FormGroup>
-                        <Label htmlFor="cover_date" />
+                        <Label htmlForm="cover_date" >Cover Date</Label>
                         <Input name="cover_date" type="date" value={cover_date} onChange={(e) => setCover_Date(e.target.value)}/>
                     </FormGroup>
                     <FormGroup>
-                        <Label htmlFor="read" />
-                        <Input type="select" name="read" value={read} onChange={(e) => setRead(e.target.value)}/>
-                        <option></option>
-                        <option value="true">Read</option>
-                        <option value="false">Unread</option>
+                        <Label htmlForm="read" >Have you read it?</Label>
+                        <Input type="select" name="read" value={read} onChange={(e) => setRead(e.target.value)}>
+                        <option value="true">yes</option>
+                        <option value="false">no</option>
+                        </Input>
                     </FormGroup>
                     <FormGroup>
-                        <Label htmlFor="owned" />
-                        <Input type="select" name="owned" value={owned} onChange={(e) => setOwned(e.target.value)}/>
-                        <option></option>
-                        <option value="true">Owned</option>
-                        <option value="false">Unowned</option>
+                        <Label htmlForm="owned" >Do You Own It?</Label>
+                        <Input type="select" name="owned" value={owned} onChange={(e) => setOwned(e.target.value)}>
+                        <option value="true">yes</option>
+                        <option value="false">no</option>
+                        </Input>
                     </FormGroup>
                     {/* <FormGroup>
-                        <Label htmlFor="image" />
+                        <Label htmlForm="image" />
                         <Input name="image" value={image} onChange={(e) => setImage(e.target.value)}/>
                     </FormGroup> */}
                     <Button type="submit">Add +</Button>

@@ -44,7 +44,7 @@ const WishlistCreate = (props) => {
 
     return (
         <>
-            <h3>Add a Wishlist</h3>
+            {/* <h3>Add a Wishlist</h3> */}
             <Form onSubmit={handleSubmit}>
                     <FormGroup>
                         <Label htmlFor="name" />
