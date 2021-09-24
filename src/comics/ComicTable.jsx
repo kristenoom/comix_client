@@ -4,7 +4,7 @@ import { Table, Button } from 'reactstrap';
 const ComicTable = (props) => {
 
     const comicMapper = () => {
-        return props.comic.map((comic, index) => {
+        return props.comics.map((comic, index) => {
             return (
                 <tr key={index}>
                     <th scope="row">{comicMapper.name}</th>
@@ -15,7 +15,7 @@ const ComicTable = (props) => {
                     <td>{comicMapper.owned}</td>
                     <td>
                         <Button color="warning" onClick={() => { props.editUpdateComic(comic); props.updateOn() }}>Update</Button>
-                        <Button color="danger" onClick={() => { deleteComic(comic) }}>Delete</Button>
+                        <Button color="danger" onClick={() => { deleteComic(comic) }}>Delete &ndash;</Button>
                     </td>
                 </tr>
             )
@@ -35,7 +35,7 @@ const ComicTable = (props) => {
 
     return (
         <>
-        <h3>Comic History</h3>
+        {/* <h3>Comic History</h3> */}
         <Table striped>
             <thread>
                 <tr>
