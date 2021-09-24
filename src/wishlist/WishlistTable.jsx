@@ -1,5 +1,6 @@
 import React from 'react';
 import { Table, Button } from 'reactstrap';
+import APIURL from './helpers/environment';
 
 const WishlistTable = (props) => {
     const wishlistMapper = () => {
@@ -22,7 +23,7 @@ const WishlistTable = (props) => {
     };
 
     const deleteWishlist = (wishlist) => {
-        fetch(`http://localhost:3000/wishlist/delete/${wishlist.id}`, {
+        fetch(`${APIURL}/wishlist/delete/${wishlist.id}`, {
             method: 'DELETE',
             headers: new Headers({
                 'Content-Type': 'application/json',

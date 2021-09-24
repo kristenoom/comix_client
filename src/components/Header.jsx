@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, Button } from 'reactstrap';
-import Sidebar from './Sidebar';
+//import Sidebar from './Sidebar';
 
-import { BrowserRouter as Router } from 'react-router-dom';
+//import { BrowserRouter as Router } from 'react-router-dom';
 
 const Header = (props) => {
 

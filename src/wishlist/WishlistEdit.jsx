@@ -1,14 +1,7 @@
 import React, { useState } from "react";
-import {
-  Button,
-  Form,
-  FormGroup,
-  Label,
-  Input,
-  Modal,
-  ModalHeader,
-  ModalBody,
-} from "reactstrap";
+import { Button, Form, FormGroup, Label, Input, Modal, ModalHeader, ModalBody } from "reactstrap";
+import APIURL from './helpers/environment';
+
 const WishlistEdit = (props) => {
     const [editName, setEditName] = useState(props.wishlistToUpdate.name);
     // const [editId, setEditId] = useState(props.wishlistToUpdate.id);
@@ -21,7 +14,7 @@ const WishlistEdit = (props) => {
 
     const wishlistUpdate = (event, wishlist) => {
         event.preventDefault();
-        fetch(`http://localhost:3000/wishlist/${props.wishlistToUpdate.id}`, {
+        fetch(`${APIURL}/wishlist/${props.wishlistToUpdate.id}`, {
             method: 'PUT',
             body: JSON.stringify({
                 wishlist: {
@@ -45,7 +38,7 @@ const WishlistEdit = (props) => {
 
     return (
         <Modal isOpen={true}>
-            <ModalHeader>Wishlist Log</ModalHeader>
+            <ModalHeader>Update Wishlist</ModalHeader>
             <ModalBody>
                 <Form onSubmit={wishlistUpdate}>
                     <FormGroup>
