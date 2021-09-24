@@ -1,33 +1,28 @@
 import { Route, Link, Switch } from "react-router-dom";
 import Home from './Home';
-import Comix from './Comix';
-import Wishlist from './Wishlist';
-// import Resources from './Resources';
-// import FunctionalComponentDemo from '../concepts/FunctionalComponentDemo';
-// import JSXRules from '../concepts/JSXRules';
-// import State from '../concepts/State';
-// import Effects from '../concepts/Effects';
-// import PropsDemo from '../concepts/PropsDemo';
-// import Hooks from '../concepts/Hooks';
-// import TimePiecesApp from '../apps/timer-apps/TimePiecesApp';
-// import NytApp from '../apps/nyt-app/NytApp';
+import ComicIndex from '../comics/ComicIndex';
+import WishlistIndex from '../wishlist/WishlistIndex';
+import Auth from '../auth/Auth';
 
 const Sidebar = (props) => {
     return (
         <div className="sidebar">
             <div className='sidebar-list-styling'>
                 <ul className='sidebar-list list-unstyled'>
-                    <li><Link to='/'>Home</Link></li>
-                    <li><Link to='/comix'>Comic Book Log</Link></li>
-                    <li><Link to='/wishlist'>Wishlist</Link></li>
+                    <li><Link to='/'></Link></li>
+                    <li><Link to='/auth'>Signup/Login</Link></li>
+                    <li><Link to='/discover'>Discover Comics</Link></li>
+                    <li><Link to='/comic'>Comic Book Log</Link></li>
+                    <li><Link to='/wishlist'>Comic Wishlist</Link></li>
                 </ul>
             </div>
             <div className='sidebar-route'>
                 <Switch>
-                    <Route exact path='/home'><Home /></Route>
-                    <Route exact path='/comix'><Comix /></Route>
                     <Route exact path='/'><Home /></Route>
-                    <Route exact path='/wishlist'><Wishlist /></Route>
+                    <Route exact path='/comic'><ComicIndex /></Route>
+                    <Route exact path='/discover'><Home /></Route>
+                    <Route exact path='/wishlist'><WishlistIndex /></Route>
+                    <Route exact path='/auth'><Auth updateToken={props.updateToken} /></Route>
                 </Switch>
             </div>
         </div>
