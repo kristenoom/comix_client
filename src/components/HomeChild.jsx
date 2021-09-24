@@ -5,6 +5,7 @@ import {Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle} from 'reacts
 
 const HomeChild = (props) => {
     //const { name, description, image, id, cover_date, issue_number } = props.comic;
+    //breaks code -- do not use line above
 
     return (
         <div>

@@ -58,15 +58,17 @@ const ComicEdit = (props) => {
                     </FormGroup>
                     <FormGroup>
                         <Label htmlFor="read">Have you read it?</Label>
-                        <Input type="select" name="read" value={editRead} onChange={(e) => setEditRead(e.target.value)}/>
+                        <Input type="select" name="read" value={editRead} onChange={(e) => setEditRead(e.target.value)}>
                         <option value="true">yes</option>
                         <option value="false">no</option>
+                        </Input>
                     </FormGroup>
                     <FormGroup>
                         <Label htmlFor="owned">Do you own it?</Label>
-                        <Input type="select" name="owned" value={editOwned} onChange={(e) => setEditOwned(e.target.value)}/>
+                        <Input type="select" name="owned" value={editOwned} onChange={(e) => setEditOwned(e.target.value)}>
                         <option value="true">yes</option>
                         <option value="false">no</option>
+                        </Input>
                     </FormGroup>
                     <Button type="submit" color="success">Update</Button>
                 </Form>
