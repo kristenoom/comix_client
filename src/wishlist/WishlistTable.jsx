@@ -2,9 +2,8 @@ import React from 'react';
 import { Table, Button } from 'reactstrap';
 
 const WishlistTable = (props) => {
-
     const wishlistMapper = () => {
-        return props.wishlist.map((wishlist, index) => {
+        return props.wishlists.map((wishlist, index) => {
             return (
                 <tr key={index}>
                     <th scope="row">{wishlistMapper.name}</th>
@@ -35,8 +34,8 @@ const WishlistTable = (props) => {
 
     return (
         <>
-        <h3>Wishlist History</h3>
-        <hr/>
+        {/* <h3 className="heading">Wishlist</h3>
+        <hr/> */}
         <Table striped>
             <thread>
                 <tr>

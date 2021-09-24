@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, Button } from 'reactstrap';
-import Sidebar from './Sidebar';
+//import Sidebar from './Sidebar';
 
 import { BrowserRouter as Router } from 'react-router-dom';
 
@@ -18,9 +18,9 @@ const Sitebar = (props) => {
             <NavbarBrand href="/" className="heading">
                 <h1>COMIXROLL</h1>
             </NavbarBrand>
-            <Router>
+            {/* <Router>
                 <Sidebar />
-            </Router>
+            </Router> */}
             <NavbarToggler onClick={toggle} />
             <Collapse isOpen={isOpen} navbar>
                 <Nav className="ml-auto" navbar>

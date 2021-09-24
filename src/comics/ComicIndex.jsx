@@ -2,9 +2,7 @@ import React, {useState, useEffect} from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import ComicCreate from './ComicCreate';
 import ComicTable from './ComicTable';
-import ComicCreate from './ComicCreate'
-import ComicTable from './ComicTable'
-import ComicEdit from './ComicEdit'
+import ComicEdit from './ComicEdit';
 
 const ComicIndex = (props) => {
     const [comics, setComics] = useState([]);
@@ -46,6 +44,12 @@ const ComicIndex = (props) => {
     return (
         <Container>
             <Row>
+                <Col md="12">
+                    <h1 className="heading">Comicbook Log</h1>
+                    <p className="text">Add a comicbook to your logbook here.</p>
+                </Col>
+            </Row>
+            <Row>
                 <Col md="3">
                     <ComicCreate fetchComics={fetchComics} token={props.token} />
                 </Col>
@@ -57,3 +61,5 @@ const ComicIndex = (props) => {
         </Container>
     )
 };
+
+export default ComicIndex;
