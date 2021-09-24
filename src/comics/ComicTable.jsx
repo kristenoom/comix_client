@@ -1,5 +1,6 @@
 import React from 'react';
 import { Table, Button } from 'reactstrap';
+import APIURL from './helpers/environment';
 
 const ComicTable = (props) => {
 
@@ -23,7 +24,7 @@ const ComicTable = (props) => {
     };
 
     const deleteComic = (comic) => {
-        fetch(`http://localhost:3000/comic/delete/${comic.id}`, {
+        fetch(`${APIURL}/comic/delete/${comic.id}`, {
             method: 'DELETE',
             headers: new Headers({
                 'Content-Type': 'application/json',

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Button, Form, FormGroup, Label, Input, Modal, ModalHeader, ModalBody } from 'reactstrap';
+import APIURL from './helpers/environment';
 
 const ComicEdit = (props) => {
     const [editName, setEditName] = useState(props.comicToUpdate.name);
@@ -13,7 +14,7 @@ const ComicEdit = (props) => {
 
     const comicUpdate = (e, comic) => {
         e.preventDefault();
-        fetch(`http://localhost:3000/comic/${props.comicToUpdate.id}`, {
+        fetch(`${APIURL}/comic/${props.comicToUpdate.id}`, {
             method: 'PUT',
             body: JSON.stringify({
                 comic: {
