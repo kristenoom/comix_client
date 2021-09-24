@@ -17,11 +17,11 @@ const Sidebar = (props) => {
             </div>
             <div className='sidebar-route'>
                 <Switch>
-                    <Route exact path='/'><Auth updateToken={updateToken} /></Route>
+                    <Route exact path='/'><Auth updateToken={props.updateToken} /></Route>
                     <Route exact path='/comix'><ComicIndex /></Route>
                     <Route exact path='/discover'><Home /></Route>
                     <Route exact path='/wishlist'><WishlistIndex /></Route>
-                    <Route exact path='/auth'><Auth updateToken={updateToken} /></Route>
+                    <Route exact path='/auth'><Auth updateToken={props.updateToken} /></Route>
                 </Switch>
             </div>
         </div>

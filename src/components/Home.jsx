@@ -2,24 +2,26 @@ import React, {useState, useEffect} from 'react';
 import HomeChild from './HomeChild';
 import {CardColumns} from 'reactstrap';
 
-const resource = `issues`;
-const api_key = `13c206af9980bdd5498672497394fae658afdaec`;
-const baseURL = `http://comicvine.gamespot.com/api`;
+// const resource = `issues`;
+// const api_key = `79bf6e691a2ed5ccfcfd437133da355bdd7b0b06`;
+// const baseURL = `http://comicvine.gamespot.com/api`;
 
 const Home = (props) => {
     const [search, setSearch] = useState('');
     const [results, setResults] = useState([]);
 
     const resource = `issues`;
-    const api_key = `13c206af9980bdd5498672497394fae658afdaec`;
+    const api_key = `79bf6e691a2ed5ccfcfd437133da355bdd7b0b06`;
     const url = `https://comicvine.gamespot.com/api/${resource}/?api_key=${api_key}&format=json&filter=image:original_url&sort=cover_date:asc`;
 
+    const fetchResults = async() => {
         const response = await fetch(url);
         const data = await response.json();
 
         console.log(data.results);
         
         setResults(data.results);
+    };
 
     useEffect(() => {
         fetchResults();
@@ -30,7 +32,7 @@ const Home = (props) => {
         fetchResults();
     };
 
-    const displayComics = () => results.map((comic) => <HomeChild key={comic.id} comic={comic} />);
+    //const displayComics = () => results.map((comic) => <HomeChild key={comic.id} comic={comic} />);
 
     return (
         <div className="main">
@@ -44,7 +46,7 @@ const Home = (props) => {
                 </form>
             <br />
             <CardColumns>
-                    {results.length > 0 ? <HomeChild displayComics={displayComics} /> : null}
+                    {results.length > 0 ? <HomeChild results={results} /> : null}
             </CardColumns>
             </div>
         </div>
