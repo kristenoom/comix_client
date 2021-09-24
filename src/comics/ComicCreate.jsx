@@ -4,7 +4,7 @@ import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 const ComicCreate = (props) => {
     const [name, setName] = useState('');
     const [description, setDescription] = useState('');
-    const [id, setId] = useState('');
+    //const [id, setId] = useState('');
     const [issue_number, setIssue_Number] = useState('');
     const [cover_date, setCover_Date] = useState('');
     const [read, setRead] = useState('');
@@ -80,7 +80,7 @@ const ComicCreate = (props) => {
                         <Label htmlForm="image" />
                         <Input name="image" value={image} onChange={(e) => setImage(e.target.value)}/>
                     </FormGroup> */}
-                    <Button type="submit">Add +</Button>
+                    <Button type="submit" color="success">Add +</Button>
                 </Form>
             </>
     )
