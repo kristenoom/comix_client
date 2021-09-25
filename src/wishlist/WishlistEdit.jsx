@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Button, Form, FormGroup, Label, Input, Modal, ModalHeader, ModalBody } from "reactstrap";
-import APIURL from './helpers/environment';
+import APIURL from './helpers/Environment';
 
 const WishlistEdit = (props) => {
 
@@ -13,7 +13,7 @@ const WishlistEdit = (props) => {
   console.log(props.token);
   const wishlistUpdate = (event, wishlist) => {
     event.preventDefault();
-    fetch(` fetch(`${APIURL}/wishlist/wishlistLog/${props.wishlistToUpdate.id}`, {
+    fetch(`${APIURL}/wishlist/wishlistLog/${props.wishlistToUpdate.id}`, {
       method: "PUT",
       body: JSON.stringify({
         wishlist: {

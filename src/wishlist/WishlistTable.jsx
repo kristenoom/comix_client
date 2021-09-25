@@ -1,6 +1,6 @@
 import React from 'react';
 import { Table, Button } from 'reactstrap';
-import APIURL from './helpers/environment';
+import APIURL from './helpers/Environment';
 
 const WishlistTable = (props) => {
     const wishlistMapper = () => {
