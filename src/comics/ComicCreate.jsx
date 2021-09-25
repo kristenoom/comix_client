@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
-import APIURL from '../helpers/Environment';
 
 const ComicCreate = (props) => {
     const [name, setName] = useState('');
     const [description, setDescription] = useState('');
+    // const [id, setId] = useState('');
     const [issue_number, setIssue_Number] = useState('');
     const [cover_date, setCover_Date] = useState('');
     // const [read, setRead] = useState('');
@@ -13,19 +13,18 @@ const ComicCreate = (props) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        
         let sessionToken = localStorage.getItem('token')
         console.log(sessionToken)
-        fetch(`https://comicsroll.herokuapp.com/comic/create`, {
+        fetch('https://comicsroll.herokuapp.com/comic/create', {
             method: 'POST',
             body: JSON.stringify({
-                comic: {
-                    name: name,
-                    description: description,
+                 
+                    title: name,
+                    issue_date: description,
                     // id: id,
-                    cover_date: cover_date,
-                    issue_number: issue_number
-                }
+                    read_status: issue_number,
+                    status: cover_date,
+                
             }),
             headers: new Headers({
                 'Content-Type': 'application/json',
@@ -58,10 +57,8 @@ const ComicCreate = (props) => {
                         <Input name="id" value={id} onChange={(e) => setId(e.target.value)}/>
                     </FormGroup> */}
                     <FormGroup>
-
                         <Label htmlForm="issue_number" >Issue date:</Label>
                         <Input name="issue_number"onChange={(e) => setDescription(e.target.value)}/>
-
                     </FormGroup>
                     {/* <FormGroup>
                         <Label htmlForm="cover_date" >Status</Label>
@@ -87,7 +84,7 @@ const ComicCreate = (props) => {
                         <Label htmlForm="image" />
                         <Input name="image" value={image} onChange={(e) => setImage(e.target.value)}/>
                     </FormGroup> */}
-                    <Button type="submit" color="success">Add +</Button>
+                    <Button type="submit">Add +</Button>
                 </Form>
             </>
     )
