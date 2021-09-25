@@ -16,6 +16,8 @@ const ComicEdit = (props) => {
 
     const comicUpdate = (e, comic) => {
         e.preventDefault();
+        let sessionToken = localStorage.getItem('token')
+        console.log(sessionToken)
         fetch(`${APIURL}/comic/${props.comicToUpdate.id}`, {
             method: 'PUT',
             body: JSON.stringify({
@@ -32,7 +34,7 @@ const ComicEdit = (props) => {
             }),
             headers: new Headers({
                 'Content-Type': 'application/json',
-                'Authorization': props.token
+                'Authorization': sessionToken
             })
         }).then((res) => {
             props.fetchComics();

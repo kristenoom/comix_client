@@ -13,7 +13,9 @@ const ComicCreate = (props) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-
+        
+        let sessionToken = localStorage.getItem('token')
+        console.log(sessionToken)
         fetch(`${APIURL}/comic/create`, {
             method: 'POST',
             body: JSON.stringify({
