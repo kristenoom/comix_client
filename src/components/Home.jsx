@@ -7,7 +7,6 @@ import {CardColumns} from 'reactstrap';
 // const baseURL = `http://comicvine.gamespot.com/api`;
 
 const Home = (props) => {
-    const [search, setSearch] = useState('');
     const [results, setResults] = useState([]);
 
     const resource = `issues`;
@@ -34,14 +33,14 @@ const Home = (props) => {
 
     return (
         <div className="main">
-            {/* <div className="mainDiv">
+            <div className="mainDiv">
             <h1 className="heading">What will you discover?</h1>
             <br />
             <br />
             <CardColumns>
                 {results.length > 0 ? <HomeChild results={results} /> : null}
             </CardColumns>
-            </div> */}
+            </div>
         </div>
     )
 }
