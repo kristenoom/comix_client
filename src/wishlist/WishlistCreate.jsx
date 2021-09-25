@@ -14,12 +14,7 @@ const WishlistCreate = (props) => {
         fetch(`https://comixroll-server.herokuapp.com/wishlist/create`, {
             method: 'POST',
             body: JSON.stringify({
-                wishlist: {
                     title: name,
-                    // description: description,
-                    // cover_date: cover_date,
-                    // issue_number: issue_number
-                }
             }),
             headers: new Headers({
                 'Content-Type': 'application/json',
