@@ -3,7 +3,7 @@ import { Container, Row, Col } from 'reactstrap';
 import ComicCreate from './ComicCreate';
 import ComicTable from './ComicTable';
 import ComicEdit from './ComicEdit';
-import APIURL from './helpers/environment';
+import APIURL from '../helpers/Environment';
 
 const ComicIndex = (props) => {
     const [comics, setComics] = useState([]);
