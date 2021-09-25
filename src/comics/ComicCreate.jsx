@@ -41,7 +41,7 @@ const ComicCreate = (props) => {
             setCover_Date('');
             setRead('');
             setOwned('');
-            //props.fetchComix();
+            //props.fetchComic();
         })
     }
 

@@ -27,7 +27,7 @@ const ComicTable = (props) => {
         console.log(comic.id);
         console.log(props.token);
 
-        fetch(`${APIURL}/comic/comix/${comic.id}`, {
+        fetch(`${APIURL}/comic/comic/${comic.id}`, {
             method: 'DELETE',
             headers: new Headers({
                 'Content-Type': 'application/json',
