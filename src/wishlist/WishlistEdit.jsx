@@ -11,7 +11,7 @@ const WishlistEdit = (props) => {
 
     const wishlistUpdate = (e, wishlist) => {
         e.preventDefault();
-        fetch(`${APIURL}/wishlist/${props.wishlistToUpdate.id}`, {
+        fetch(`https://comixroll-server.herokuapp.com/wishlist/${props.wishlistToUpdate.id}`, {
             method: 'PUT',
             body: JSON.stringify({
                 wishlist: {

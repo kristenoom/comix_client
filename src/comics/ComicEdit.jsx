@@ -14,7 +14,7 @@ const ComicEdit = (props) => {
 
     const comicUpdate = (e, comic) => {
         e.preventDefault();
-        fetch(`${APIURL}/comic/${props.comicToUpdate.id}`, {
+        fetch(`https://comixroll-server.herokuapp.com/comic/${props.comicToUpdate.id}`, {
             method: 'PUT',
             body: JSON.stringify({
                 comic: {

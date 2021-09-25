@@ -23,7 +23,7 @@ const WishlistTable = (props) => {
     };
 
     const deleteWishlist = (wishlist) => {
-        fetch(`${APIURL}/wishlist/delete/${wishlist.id}`, {
+        fetch(`https://comixroll-server.herokuapp.com/wishlist/delete/${wishlist.id}`, {
             method: 'DELETE',
             headers: new Headers({
                 'Content-Type': 'application/json',

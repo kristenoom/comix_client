@@ -14,7 +14,7 @@ const ComicCreate = (props) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        fetch(`${APIURL}/comic/create`, {
+        fetch(`https://comixroll-server.herokuapp.com/comic/create`, {
             method: 'POST',
             body: JSON.stringify({
                     title: name,

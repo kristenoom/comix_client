@@ -14,7 +14,7 @@ const ComicIndex = (props) => {
         let sessionToken = localStorage.getItem('token');
         console.log(sessionToken);
         
-        fetch(`${APIURL}/comic/comicLog`, {
+        fetch(`https://comixroll-server.herokuapp.com/comic/comicLog`, {
             method: 'GET',
             headers: new Headers({
                 'Content-Type': 'application/json',

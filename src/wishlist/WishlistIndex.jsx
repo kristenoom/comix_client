@@ -14,7 +14,7 @@ const WishlistIndex = (props) => {
         let sessionToken = localStorage.getItem('token');
         console.log(sessionToken);
 
-        fetch(`${APIURL}/wishlist/wishlistLog`, {
+        fetch(`https://comixroll-server.herokuapp.com/wishlist/wishlistLog`, {
             method: 'GET',
             headers: new Headers({
                 'Content-Type': 'application/json',
@@ -41,7 +41,7 @@ const WishlistIndex = (props) => {
     const updateOff = () => {
         setUpdateActive(false);
     };
-    
+
     return (
         <Container>
             <Row>

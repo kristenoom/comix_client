@@ -11,7 +11,7 @@ const WishlistCreate = (props) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        fetch(`${APIURL}/wishlist/create`, {
+        fetch(`https://comixroll-server.herokuapp.com/wishlist/create`, {
             method: 'POST',
             body: JSON.stringify({
                 wishlist: {
