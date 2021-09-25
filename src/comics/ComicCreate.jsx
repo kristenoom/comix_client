@@ -4,8 +4,8 @@ import APIURL from '../helpers/Environment';
 
 const ComicCreate = (props) => {
     const [name, setName] = useState('');
-    const [issue_number, setIssue_Number] = useState('');
-    const [cover_date, setCover_Date] = useState('');
+    const [issue_number, setIssue_Number] = useState('');  //Comic Book ISSUE #
+    const [cover_date, setCover_Date] = useState(''); // Comic Book COVER DATE
     const [read, setRead] = useState('');
     const [owned, setOwned] = useState('');
     //const [description, setDescription] = useState('');
@@ -18,8 +18,8 @@ const ComicCreate = (props) => {
             method: 'POST',
             body: JSON.stringify({
                     title: name,
-                    cover_date: cover_date,
-                    issue_date: issue_number,
+                    issue_number: issue_number, //ISSUE #
+                    issue_date: cover_date, //COVER DATE
                     read_status: read,
                     status: owned
             }),
