@@ -27,7 +27,7 @@ const WishlistCreate = (props) => {
             // setDescription('');
             // setIssue_Number('');
             // setCover_Date('');
-            //props.fetchWishlists();
+            props.fetchWishlists();
         })
     }
 
