@@ -22,7 +22,7 @@ const WishlistTable = (props) => {
     };
 
     const deleteWishlist = (wishlist) => {
-        fetch(`http://localhost:3000/wishlist/delete/${wishlist.id}`, {
+        fetch(`http://localhost:3000/wishlist/wishlist/${wishlist.id}`, {
             method: 'DELETE',
             headers: new Headers({
                 'Content-Type': 'application/json',

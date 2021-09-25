@@ -13,7 +13,7 @@ const WishlistCreate = (props) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        fetch('http://localhost:3000/wishlist/', {
+        fetch('http://localhost:3000/wishlist/create', {
             method: 'POST',
             body: JSON.stringify({
                 wishlist: {
