@@ -11,9 +11,9 @@ const Sidebar = (props) => {
                 <ul className='sidebar-list list-unstyled'>
                     <li><Link to='/'></Link></li>
                     <li><Link to='/auth'>Signup/Login</Link></li>
-                    <li><Link to='/discover'>Discover Comics</Link></li>
+                    <li><Link to='/discover'>Discover</Link></li>
                     <li><Link to='/comic'>Comic Book Log</Link></li>
-                    <li><Link to='/wishlist'>Comic Wishlist</Link></li>
+                    <li><Link to='/wishlist'>Wishlist</Link></li>
                 </ul>
             </div>
             <div className='sidebar-route'>
