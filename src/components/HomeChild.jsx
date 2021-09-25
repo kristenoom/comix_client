@@ -11,7 +11,7 @@ const HomeChild = (props) => {
                 return (
                     <div key={result.id}>
                     <CardColumns>
-                        <Card style={{ width: '200px' }}>
+                        <Card style={{ width: '300px' }}>
                             <CardBody>
                                 <CardTitle tag="h5" className="text"><strong className="text-muted">Title:</strong> {result.volume.name}</CardTitle>
                                 <CardSubtitle tag="h6" className="mb-2 text-muted">
