@@ -17,14 +17,12 @@ const ComicEdit = (props) => {
         fetch(`https://comixroll-server.herokuapp.com/comic/${props.comicToUpdate.id}`, {
             method: 'PUT',
             body: JSON.stringify({
-                comic: {
                     title: editName,
                     // id: editId,
-                    issue_number: editIssue_number,
+                    issue_date: editIssue_number,
                     cover_date: editCover_date,
                     read_status: editRead,
                     status: editOwned
-                }
             }),
             headers: new Headers({
                 'Content-Type': 'application/json',

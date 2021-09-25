@@ -21,7 +21,7 @@ const ComicCreate = (props) => {
                     //description: description,
                     //id: id,
                     cover_date: cover_date,
-                    issue_number: issue_number,
+                    issue_date: issue_number,
                     read_status: read,
                     status: owned
             }),
