@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
+import APIURL from './helpers/environment';
 
 const WishlistCreate = (props) => {
     const [name, setName] = useState('');
@@ -13,7 +14,9 @@ const WishlistCreate = (props) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        fetch('http://localhost:3000/wishlist/create', {
+
+        fetch(`${APIURL}/wishlist/create`, {
+
             method: 'POST',
             body: JSON.stringify({
                 wishlist: {
@@ -80,7 +83,7 @@ const WishlistCreate = (props) => {
                         <Label htmlFor="image" />
                         <Input name="image" value={image} onChange={(e) => setImage(e.target.value)}/>
                     </FormGroup> */}
-                    <Button type="submit">Add +</Button>
+                    <Button type="submit" color="success">Add +</Button>
                 </Form>
             </>
     )

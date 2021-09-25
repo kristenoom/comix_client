@@ -1,5 +1,6 @@
 import React from 'react';
 import { Table, Button } from 'reactstrap';
+import APIURL from './helpers/environment';
 
 const ComicTable = (props) => {
 
@@ -8,11 +9,13 @@ const ComicTable = (props) => {
             console.log(comic)
             return (
                 <tr key={index}>
+
                     <td>{comic.id}</td>
                     <td>{comic.title}</td>
                     <td>{comic.issue_date}</td>
                     <td>{comic.read_status}</td>
                     <td>{comic.status}</td>
+
                     <td>
                         <Button color="warning" onClick={() => { props.editUpdateComic(comic); props.updateOn() }}>Update</Button>
                         <Button color="danger" onClick={() => { deleteComic(comic) }}>Delete</Button>
@@ -25,7 +28,9 @@ const ComicTable = (props) => {
     const deleteComic = (comic) => {
         console.log(comic.id)
         console.log(props.token)
-        fetch(`http://localhost:3000/comic/comix/${comic.id}`, {
+
+        fetch(`${APIURL}/comic/comix/${comic.id}`, {
+
             method: 'DELETE',
             headers: new Headers({
                 'Content-Type': 'application/json',
@@ -42,9 +47,9 @@ const ComicTable = (props) => {
             <thread>
                 <tr>
                     <th>#</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                    <th>Id</th>
+                    <th>Title</th>
+                    {/* <th>Description</th> */}
+                    {/* <th>Id</th> */}
                     <th>Issue Number</th>
                     <th>Cover Date</th>
                     <th>Read</th>

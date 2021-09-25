@@ -5,6 +5,7 @@ import {Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle} from 'reacts
 
 const HomeChild = (props) => {
     //const { name, description, image, id, cover_date, issue_number } = props.comic;
+    //breaks code -- do not use line above
 
     return (
         <div>
@@ -12,6 +13,7 @@ const HomeChild = (props) => {
                 return (
                     <div key={result.id}>
                     <Card>
+
                         <CardImg top width="50%" src={result.image.small_url} alt={result.name} />
                         <CardBody>
                             <CardTitle tag="h5">{result.name}</CardTitle>
@@ -20,6 +22,7 @@ const HomeChild = (props) => {
                                 Issue Number: {result.issue_number}<br />
                                 Cover Date: {result.cover_date}<br />
                                 Description: {result.description}
+
                             </CardText>
                         </CardBody>
                     </Card>

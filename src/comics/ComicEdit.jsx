@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { Button, Form, FormGroup, Label, Input, Modal, ModalHeader, ModalBody } from 'reactstrap';
+import APIURL from './helpers/environment';
 
 const ComicEdit = (props) => {
+
     const [editName, setEditName] = useState(props.comicToUpdate.title);
     // const [editId, setEditId] = useState(props.comicToUpdate.id);
     const [editIssue_number, setEditIssue_Number] = useState(props.comicToUpdate.issue_date);
@@ -9,13 +11,15 @@ const ComicEdit = (props) => {
     const [editDescription, setEditDescription] = useState(props.comicToUpdate.read_status);
     // const [editOwned, setEditOwned] = useState(props.comicToUpdate.owned);
 
+
     console.log(props.token);
 
     const comicUpdate = (e, comic) => {
         e.preventDefault();
-        fetch(`http://localhost:3000/comic/${props.comicToUpdate.id}`, {
+        fetch(`${APIURL}/comic/${props.comicToUpdate.id}`, {
             method: 'PUT',
             body: JSON.stringify({
+
                 
                     title: editName,
                     // id: editId,
@@ -24,6 +28,7 @@ const ComicEdit = (props) => {
                     read_status: editIssue_number,
                     status: editCover_date
                 
+
             }),
             headers: new Headers({
                 'Content-Type': 'application/json',
@@ -37,7 +42,7 @@ const ComicEdit = (props) => {
 
     return (
         <Modal isOpen={true}>
-            <ModalHeader>Log Your Comic</ModalHeader>
+            <ModalHeader>Edit Your Comic Entry</ModalHeader>
             <ModalBody>
                 <Form onSubmit={comicUpdate}>
                     <FormGroup>
@@ -49,14 +54,14 @@ const ComicEdit = (props) => {
                         <Input name="id" value={editId} onChange={(e) => setEditId(e.target.value)}/>
                     </FormGroup> */}
                     <FormGroup>
+
                         <Label htmlFor="issue_number">Edit Issue Number:</Label>
                         <Input name="issue_number" value={editDescription} onChange={(e) => setEditDescription(e.target.value)}/>
                     </FormGroup>
-                    {/* <FormGroup>
-                        <Label htmlFor="cover_date">Edit Cover Date:</Label>
-                        <Input name="cover_date" value={editCover_date} onChange={(e) => setEditCover_Date(e.target.value)}/>
-                    </FormGroup> */}
+                    
+                             
                     <FormGroup>
+
                         <Label htmlFor="read">Edit Read Status:</Label>
                         <Input type="select" name="read" value={editIssue_number} onChange={(e) => setEditIssue_Number(e.target.value)}>
                         <option value="" disable>Select a Option</option>
@@ -70,6 +75,7 @@ const ComicEdit = (props) => {
                         <option value="" disable>Select a Option</option>
                         <option value="Yes">Owned</option>
                         <option value="No">Unowned</option>
+
                         </Input>
                     </FormGroup>
                     <Button type="submit" color="success">Update</Button>
