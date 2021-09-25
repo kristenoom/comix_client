@@ -29,7 +29,7 @@ const ComicTable = (props) => {
         console.log(comic.id)
         console.log(props.token)
 
-        fetch(`https://comicsroll.herokuapp.com'/comic/comix/${comic.id}`, {
+        fetch(`https://comicsroll.herokuapp.com/comic/comix/${comic.id}`, {
 
             method: 'DELETE',
             headers: new Headers({

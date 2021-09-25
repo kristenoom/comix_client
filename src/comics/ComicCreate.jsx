@@ -16,7 +16,7 @@ const ComicCreate = (props) => {
         
         let sessionToken = localStorage.getItem('token')
         console.log(sessionToken)
-        fetch(`https://comicsroll.herokuapp.com'/comic/create`, {
+        fetch(`https://comicsroll.herokuapp.com/comic/create`, {
             method: 'POST',
             body: JSON.stringify({
                 comic: {
