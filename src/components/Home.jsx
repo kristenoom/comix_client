@@ -33,20 +33,20 @@ const Home = (props) => {
     //const displayComics = () => results.map((comic) => <HomeChild key={comic.id} comic={comic} />);
 
     return (
-        <div className="main">
-            <div className="mainDiv">
+        <div>
+            {/* <div className="mainDiv">
             <h1 className="heading">What will you discover?</h1>
             <br />
                 {/* <form onSubmit={(e) => handleSubmit(e)}>
                     <span>Enter search term (required): </span>
                     <input type="text" name="search" onChange={(e) => setSearch(e.target.value)} required />&nbsp;
                     <button color="success" className="submit">Submit</button>
-                </form> */}
+                </form> 
             <br />
             <CardColumns>
                 {results.length > 0 ? <HomeChild results={results} /> : null}
             </CardColumns>
-            </div>
+            </div> */}
         </div>
     )
 }
