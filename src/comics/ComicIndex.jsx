@@ -9,13 +9,17 @@ const ComicIndex = (props) => {
     const [comics, setComics] = useState([]);
     const [updateActive, setUpdateActive] = useState(false);
     const [comicToUpdate, setComicToUpdate] = useState({});
-
     const fetchComics = () => {
-        fetch(`${APIURL}/comic`, {
+
+        let sessionToken = localStorage.getItem('token')
+        console.log(sessionToken)
+
+        fetch(`${APIURL}/comic/comixLog`, {
+
             method: 'GET',
             headers: new Headers({
                 'Content-Type': 'application/json',
-                'Authorization': props.token
+                'Authorization': sessionToken
             })
         })
             .then((res) => res.json())

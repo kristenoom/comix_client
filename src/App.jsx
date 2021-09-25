@@ -26,7 +26,7 @@ const App = () => {
         <div className="App">
             <Header />
             <Router>
-                <Sidebar updateToken={updateToken} />
+                <Sidebar updateToken={updateToken} token={sessionToken}/>
             </Router>
             {/* <Auth updateToken={updateToken} /> */}
             <Footer />

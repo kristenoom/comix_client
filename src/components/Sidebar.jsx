@@ -19,7 +19,7 @@ const Sidebar = (props) => {
             <div className='sidebar-route'>
                 <Switch>
                     <Route exact path='/'><Home /></Route>
-                    <Route exact path='/comic'><ComicIndex /></Route>
+                    <Route exact path='/comic'><ComicIndex token={props.token} /></Route>
                     <Route exact path='/discover'><Home /></Route>
                     <Route exact path='/wishlist'><WishlistIndex /></Route>
                     <Route exact path='/auth'><Auth updateToken={props.updateToken} /></Route>

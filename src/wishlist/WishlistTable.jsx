@@ -23,7 +23,9 @@ const WishlistTable = (props) => {
     };
 
     const deleteWishlist = (wishlist) => {
-        fetch(`${APIURL}/wishlist/delete/${wishlist.id}`, {
+
+        fetch(`${APIURL}/wishlist/wishlist/${wishlist.id}`, {
+
             method: 'DELETE',
             headers: new Headers({
                 'Content-Type': 'application/json',

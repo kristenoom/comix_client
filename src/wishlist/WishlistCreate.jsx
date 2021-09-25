@@ -14,7 +14,9 @@ const WishlistCreate = (props) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        fetch(`${APIURL}/wishlist/`, {
+
+        fetch(`${APIURL}/wishlist/create`, {
+
             method: 'POST',
             body: JSON.stringify({
                 wishlist: {
