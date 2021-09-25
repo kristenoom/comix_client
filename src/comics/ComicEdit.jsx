@@ -18,7 +18,7 @@ const ComicEdit = (props) => {
         e.preventDefault();
         let sessionToken = localStorage.getItem('token')
         console.log(sessionToken)
-        fetch(`${APIURL}/comic/${props.comicToUpdate.id}`, {
+        fetch(`https://comicsroll.herokuapp.com'/comic/${props.comicToUpdate.id}`, {
             method: 'PUT',
             body: JSON.stringify({
 
