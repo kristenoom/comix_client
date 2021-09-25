@@ -22,8 +22,8 @@ const ComicEdit = (props) => {
                     // id: editId,
                     issue_number: editIssue_number,
                     cover_date: editCover_date,
-                    read: editRead,
-                    owned: editOwned
+                    read_status: editRead,
+                    status: editOwned
                 }
             }),
             headers: new Headers({
@@ -42,7 +42,7 @@ const ComicEdit = (props) => {
             <ModalBody>
                 <Form onSubmit={comicUpdate}>
                     <FormGroup>
-                        <Label htmlFor="name">Title:</Label>
+                        <Label htmlForm="name">Title:</Label>
                         <Input name="name" value={editName} onChange={(e) => setEditName(e.target.value)} />
                     </FormGroup>
                     {/* <FormGroup>
@@ -50,22 +50,22 @@ const ComicEdit = (props) => {
                         <Input name="id" value={editId} onChange={(e) => setEditId(e.target.value)}/>
                     </FormGroup> */}
                     <FormGroup>
-                        <Label htmlFor="issue_number">Issue Number:</Label>
+                        <Label htmlForm="issue_number">Issue Number:</Label>
                         <Input name="issue_number" value={editIssue_number} onChange={(e) => setEditIssue_Number(e.target.value)}/>
                     </FormGroup>
                     <FormGroup>
-                        <Label htmlFor="cover_date">Cover Date:</Label>
+                        <Label htmlForm="cover_date">Cover Date:</Label>
                         <Input name="cover_date" value={editCover_date} onChange={(e) => setEditCover_Date(e.target.value)}/>
                     </FormGroup>
                     <FormGroup>
-                        <Label htmlFor="read">Have you read it?</Label>
-                        <Input type="select" name="read" value={editRead} onChange={(e) => setEditRead(e.target.value)}>
+                        <Label htmlForm="read_status">Have you read it?</Label>
+                        <Input type="select" name="read_status" value={editRead} onChange={(e) => setEditRead(e.target.value)}>
                         <option value="Yes">yes</option>
                         <option value="No">no</option>
                         </Input>
                     </FormGroup>
                     <FormGroup>
-                        <Label htmlFor="owned">Do you own it?</Label>
+                        <Label htmlForm="owned">Do you own it?</Label>
                         <Input type="select" name="owned" value={editOwned} onChange={(e) => setEditOwned(e.target.value)}>
                         <option value="Yes">yes</option>
                         <option value="No">no</option>

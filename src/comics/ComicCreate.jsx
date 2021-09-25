@@ -17,15 +17,13 @@ const ComicCreate = (props) => {
         fetch(`${APIURL}/comic/create`, {
             method: 'POST',
             body: JSON.stringify({
-                comic: {
                     title: name,
                     //description: description,
                     //id: id,
                     cover_date: cover_date,
                     issue_number: issue_number,
-                    read: read,
-                    owned: owned
-                }
+                    read_status: read,
+                    status: owned
             }),
             headers: new Headers({
                 'Content-Type': 'application/json',

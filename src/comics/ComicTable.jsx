@@ -7,13 +7,13 @@ const ComicTable = (props) => {
     const comicMapper = () => {
         return props.comics.map((comic, index) => {
             return (
-                <tr key={index}>
+                <tr key={index} className="text">
                     <td>{comic.id}</td> 
-                    <td>{comic.name}</td>
+                    <td>{comic.title}</td>
                     <td>{comic.issue_number}</td>
                     <td>{comic.cover_date}</td>
-                    <td>{comic.read}</td>
-                    <td>{comic.owned}</td>
+                    <td>{comic.read_status}</td>
+                    <td>{comic.status}</td>
                     <td>
                         <Button color="warning" onClick={() => { props.editUpdateComic(comic); props.updateOn() }}>Update</Button>
                         <Button color="danger" onClick={() => { deleteComic(comic) }}>Delete &ndash;</Button>
