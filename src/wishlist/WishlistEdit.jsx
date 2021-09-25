@@ -19,7 +19,7 @@ const WishlistEdit = (props) => {
   console.log(props.token);
   const wishlistUpdate = (event, wishlist) => {
     event.preventDefault();
-    fetch(`http://localhost:3000/wishlist/${props.wishlistToUpdate.id}`, {
+    fetch(`http://localhost:3000/wishlist/wishlistLog/${props.wishlistToUpdate.id}`, {
       method: "PUT",
       body: JSON.stringify({
         wishlist: {

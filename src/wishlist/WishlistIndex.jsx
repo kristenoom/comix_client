@@ -9,7 +9,7 @@ const WishlistIndex = (props) => {
     const [updateActive, setUpdateActive] = useState(false);
     const [wishlistToUpdate, setWishlistToUpdate] = useState({});
     const fetchWishlists = () => {
-        fetch('http://localhost:3000/wishlist', {
+        fetch('http://localhost:3000/wishlist/wishlistLog', {
             method: 'GET',
             headers: new Headers({
                 'Content-Type': 'application/json',

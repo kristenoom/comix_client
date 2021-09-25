@@ -3,19 +3,19 @@ import { Table, Button } from 'reactstrap';
 
 const ComicTable = (props) => {
 
-    const comicMapper = () => {
+    const comicMapper2 = () => {
         return props.comics.map((comic, index) => {
+            console.log(comic)
             return (
                 <tr key={index}>
-                    <th scope="row">{comicMapper.name}</th>
-                    <td>{comicMapper.id}</td>
-                    <td>{comicMapper.issue_number}</td>
-                    <td>{comicMapper.cover_date}</td>
-                    <td>{comicMapper.read}</td>
-                    <td>{comicMapper.owned}</td>
+                    <td>{comic.id}</td>
+                    <td>{comic.title}</td>
+                    <td>{comic.issue_date}</td>
+                    <td>{comic.read_status}</td>
+                    <td>{comic.status}</td>
                     <td>
                         <Button color="warning" onClick={() => { props.editUpdateComic(comic); props.updateOn() }}>Update</Button>
-                        <Button color="danger" onClick={() => { deleteComic(comic) }}>Delete &ndash;</Button>
+                        <Button color="danger" onClick={() => { deleteComic(comic) }}>Delete</Button>
                     </td>
                 </tr>
             )
@@ -23,14 +23,16 @@ const ComicTable = (props) => {
     };
 
     const deleteComic = (comic) => {
-        fetch(`http://localhost:3000/comic/delete/${comic.id}`, {
+        console.log(comic.id)
+        console.log(props.token)
+        fetch(`http://localhost:3000/comic/comix/${comic.id}`, {
             method: 'DELETE',
             headers: new Headers({
                 'Content-Type': 'application/json',
                 'Authorization': props.token
             })
         })
-            .then(() => props.fetchComic())
+            .then(() => props.fetchComics())
     };
 
     return (
@@ -50,7 +52,7 @@ const ComicTable = (props) => {
                 </tr>
             </thread>
             <tbody>
-                {comicMapper()}
+                {comicMapper2()}
             </tbody>
         </Table>
         </>

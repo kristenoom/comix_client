@@ -12,10 +12,10 @@ const HomeChild = (props) => {
                 return (
                     <div key={result.id}>
                     <Card>
-                        <CardImg top width="50%" src={result.image.medium_url} alt={result.name} />
+                        <CardImg top width="50%" src={result.image.small_url} alt={result.name} />
                         <CardBody>
                             <CardTitle tag="h5">{result.name}</CardTitle>
-                            <CardSubtitle tag="h6" className="mb-2 text-muted">{result.id}</CardSubtitle>
+                            <CardSubtitle tag="h6" className="mb-2 text-muted">{result.volume.name}</CardSubtitle>
                             <CardText>
                                 Issue Number: {result.issue_number}<br />
                                 Cover Date: {result.cover_date}<br />
