@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
-import APIURL from './helpers/Environment';
+import APIURL from '../helpers/Environment';
 
 const WishlistCreate = (props) => {
     const [name, setName] = useState('');

@@ -3,7 +3,7 @@ import { Container, Row, Col } from 'reactstrap';
 import WishlistCreate from './WishlistCreate';
 import WishlistTable from './WishlistTable';
 import WishlistEdit from './WishlistEdit';
-import APIURL from './helpers/Environment';
+import APIURL from '../helpers/Environment';
 
 const WishlistIndex = (props) => {
     const [wishlists, setWishlists] = useState([]);
