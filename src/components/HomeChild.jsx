@@ -15,8 +15,10 @@ const HomeChild = (props) => {
                     <Card>
                         <CardImg top width="25%" src={result.image.small_url} alt={result.volume.name} />
                         <CardBody>
-                            <CardTitle tag="h5"><strong className="text-muted">Title:</strong> {result.volume.name}</CardTitle>
-                            {/* <CardSubtitle tag="h6" className="mb-2 text-muted"><strong>Volume:</strong> {result.volume}</CardSubtitle> */}
+                            <CardTitle tag="h5" className="text"><strong className="text-muted">Title:</strong> {result.volume.name}</CardTitle>
+                                <CardSubtitle tag="h6" className="mb-2 text-muted">
+                                    {/* <strong>Volume:</strong> {result.volume} */}
+                                </CardSubtitle>
                             <CardText className="text">
                                 <strong>Issue Number:</strong> {result.issue_number}<br />
                                 <strong>Cover Date:</strong> {result.cover_date}<br />
