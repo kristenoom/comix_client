@@ -18,8 +18,6 @@ const ComicCreate = (props) => {
             method: 'POST',
             body: JSON.stringify({
                     title: name,
-                    //description: description,
-                    //id: id,
                     cover_date: cover_date,
                     issue_date: issue_number,
                     read_status: read,
@@ -39,7 +37,7 @@ const ComicCreate = (props) => {
             setCover_Date('');
             setRead('');
             setOwned('');
-            //props.fetchComic();
+            props.fetchComics();
         })
     }
 
