@@ -18,7 +18,7 @@ const App = () => {
 
     const updateToken = (newToken) => {
         localStorage.setItem('token', newToken);
-        setSessionToken(newToken)
+        setSessionToken(newToken);
         console.log(sessionToken);
     }
 
@@ -26,7 +26,7 @@ const App = () => {
         <div className="App">
             <Header />
             <Router>
-                <Sidebar updateToken={updateToken} />
+                <Sidebar updateToken={updateToken} token={sessionToken} />
             </Router>
             {/* <Auth updateToken={updateToken} /> */}
             <Footer />

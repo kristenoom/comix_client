@@ -3,7 +3,7 @@ import { Button, Form, FormGroup, Label, Input, Modal, ModalHeader, ModalBody } 
 import APIURL from '../helpers/Environment';
 
 const ComicEdit = (props) => {
-    const [editName, setEditName] = useState(props.comicToUpdate.name);
+    const [editName, setEditName] = useState(props.comicToUpdate.title);
     //const [editId, setEditId] = useState(props.comicToUpdate.id);
     const [editIssue_number, setEditIssue_Number] = useState(props.comicToUpdate.issue_number);
     const [editCover_date, setEditCover_Date] = useState(props.comicToUpdate.cover_date);
@@ -18,7 +18,7 @@ const ComicEdit = (props) => {
             method: 'PUT',
             body: JSON.stringify({
                 comic: {
-                    name: editName,
+                    title: editName,
                     // id: editId,
                     issue_number: editIssue_number,
                     cover_date: editCover_date,
@@ -31,7 +31,7 @@ const ComicEdit = (props) => {
                 'Authorization': props.token
             })
         }).then((res) => {
-            props.fetchComic();
+            props.fetchComics();
             props.updateOff();
         })
     }
@@ -60,15 +60,15 @@ const ComicEdit = (props) => {
                     <FormGroup>
                         <Label htmlFor="read">Have you read it?</Label>
                         <Input type="select" name="read" value={editRead} onChange={(e) => setEditRead(e.target.value)}>
-                        <option value="true">yes</option>
-                        <option value="false">no</option>
+                        <option value="Yes">yes</option>
+                        <option value="No">no</option>
                         </Input>
                     </FormGroup>
                     <FormGroup>
                         <Label htmlFor="owned">Do you own it?</Label>
                         <Input type="select" name="owned" value={editOwned} onChange={(e) => setEditOwned(e.target.value)}>
-                        <option value="true">yes</option>
-                        <option value="false">no</option>
+                        <option value="Yes">yes</option>
+                        <option value="No">no</option>
                         </Input>
                     </FormGroup>
                     <Button type="submit" color="success">Update</Button>

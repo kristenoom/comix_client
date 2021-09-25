@@ -8,12 +8,12 @@ const ComicTable = (props) => {
         return props.comics.map((comic, index) => {
             return (
                 <tr key={index}>
-                    <th scope="row">{comicMapper.name}</th>
-                    {/* <td>{comicMapper.id}</td> */}
-                    <td>{comicMapper.issue_number}</td>
-                    <td>{comicMapper.cover_date}</td>
-                    <td>{comicMapper.read}</td>
-                    <td>{comicMapper.owned}</td>
+                    <td>{comic.id}</td> 
+                    <td>{comic.name}</td>
+                    <td>{comic.issue_number}</td>
+                    <td>{comic.cover_date}</td>
+                    <td>{comic.read}</td>
+                    <td>{comic.owned}</td>
                     <td>
                         <Button color="warning" onClick={() => { props.editUpdateComic(comic); props.updateOn() }}>Update</Button>
                         <Button color="danger" onClick={() => { deleteComic(comic) }}>Delete &ndash;</Button>
@@ -24,14 +24,17 @@ const ComicTable = (props) => {
     };
 
     const deleteComic = (comic) => {
-        fetch(`${APIURL}/comic/delete/${comic.id}`, {
+        console.log(comic.id);
+        console.log(props.token);
+
+        fetch(`${APIURL}/comic/comix/${comic.id}`, {
             method: 'DELETE',
             headers: new Headers({
                 'Content-Type': 'application/json',
                 'Authorization': props.token
             })
         })
-            .then(() => props.fetchComic())
+            .then(() => props.fetchComics())
     };
 
     return (

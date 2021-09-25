@@ -2,10 +2,6 @@ import {useState, useEffect} from 'react';
 import HomeChild from './HomeChild';
 import {CardColumns} from 'reactstrap';
 
-// const resource = `issues`;
-// const api_key = `fd2fa4883d09424b39194fa5540f7f8ce9bac4e0`;
-// const baseURL = `http://comicvine.gamespot.com/api`;
-
 const Home = (props) => {
     const [results, setResults] = useState([]);
 
@@ -29,20 +25,18 @@ const Home = (props) => {
         fetchResults();
     };
 
-    //const displayComics = () => results.map((comic) => <HomeChild key={comic.id} comic={comic} />);
-
     return (
         <div className="main">
             <div className="mainDiv">
-            <h1 className="heading">What will you discover?</h1>
-            <br />
-            <br />
-            <CardColumns>
-                {results.length > 0 ? <HomeChild results={results} /> : null}
-            </CardColumns>
+                <h1 className="heading">What will you discover?</h1>
+                <br />
+                <br />
+                <CardColumns>
+                    {results.length > 0 ? <HomeChild results={results} /> : null}
+                </CardColumns>
             </div>
         </div>
     )
-}
+};
 
 export default Home;

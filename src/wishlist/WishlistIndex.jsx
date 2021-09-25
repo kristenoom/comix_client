@@ -9,12 +9,16 @@ const WishlistIndex = (props) => {
     const [wishlists, setWishlists] = useState([]);
     const [updateActive, setUpdateActive] = useState(false);
     const [wishlistToUpdate, setWishlistToUpdate] = useState({});
+
     const fetchWishlists = () => {
-        fetch(`${APIURL}/wishlist`, {
+        let sessionToken = localStorage.getItem('token');
+        console.log(sessionToken);
+
+        fetch(`${APIURL}/wishlist/wishlistLog`, {
             method: 'GET',
             headers: new Headers({
                 'Content-Type': 'application/json',
-                'Authorization': props.token
+                'Authorization': sessionToken
             })
         })
             .then((res) => res.json())
@@ -37,6 +41,7 @@ const WishlistIndex = (props) => {
     const updateOff = () => {
         setUpdateActive(false);
     };
+    
     return (
         <Container>
             <Row>
@@ -57,4 +62,5 @@ const WishlistIndex = (props) => {
         </Container>
     )
 };
+
 export default WishlistIndex;

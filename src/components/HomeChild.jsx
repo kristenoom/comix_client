@@ -1,5 +1,3 @@
-//import {Link} from "react-router-dom";
-
 import React from 'react';
 import {Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle} from 'reactstrap';
 
@@ -12,8 +10,8 @@ const HomeChild = (props) => {
             {props.results.map(result => {
                 return (
                     <div key={result.id}>
-                    <Card>
-                        <CardImg top width="25%" src={result.image.small_url} alt={result.volume.name} />
+                    <Card style={{width: '100px'}}>
+                        <CardImg top src={result.image.small_url} alt={result.volume.name} />
                         <CardBody>
                             <CardTitle tag="h5" className="text"><strong className="text-muted">Title:</strong> {result.volume.name}</CardTitle>
                                 <CardSubtitle tag="h6" className="mb-2 text-muted">

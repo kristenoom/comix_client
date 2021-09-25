@@ -5,14 +5,14 @@ import APIURL from '../helpers/Environment';
 const WishlistTable = (props) => {
     const wishlistMapper = () => {
         return props.wishlists.map((wishlist, index) => {
+            console.log(wishlist);
             return (
                 <tr key={index}>
-                    <th scope="row">{wishlistMapper.name}</th>
-                    {/* <td>{wishlistMapper.id}</td>
+                    <td>{wishlist.title}</td>
+                    {/* 
                     <td>{wishlistMapper.issue_number}</td>
                     <td>{wishlistMapper.cover_date}</td>
-                    <td>{wishlistMapper.read}</td>
-                    <td>{wishlistMapper.owned}</td> */}
+                     */}
                     <td>
                         <Button color="warning" onClick={() => { props.editUpdateWishlist(wishlist); props.updateOn() }}>Update</Button>
                         <Button color="danger" onClick={() => { deleteWishlist(wishlist) }}>Delete</Button>
@@ -41,13 +41,12 @@ const WishlistTable = (props) => {
             <thread>
                 <tr>
                     <th>#</th>
-                    <th>Name</th>
-                    {/* <th>Description</th>
-                    <th>Id</th>
+                    <th>Title</th>
+                    {/* 
+                    <th>Description</th>
                     <th>Issue Number</th>
                     <th>Cover Date</th>
-                    <th>Read</th>
-                    <th>Owned</th> */}
+                     */}
                 </tr>
             </thread>
             <tbody>

@@ -4,12 +4,12 @@ import APIURL from '../helpers/Environment';
 
 const ComicCreate = (props) => {
     const [name, setName] = useState('');
-    const [description, setDescription] = useState('');
-    //const [id, setId] = useState('');
     const [issue_number, setIssue_Number] = useState('');
     const [cover_date, setCover_Date] = useState('');
     const [read, setRead] = useState('');
     const [owned, setOwned] = useState('');
+    //const [description, setDescription] = useState('');
+    //const [id, setId] = useState('');
     // const [image, setImage] = useState(''); not needed right now
 
     const handleSubmit = (e) => {
@@ -18,11 +18,13 @@ const ComicCreate = (props) => {
             method: 'POST',
             body: JSON.stringify({
                 comic: {
-                    name: name,
-                    description: description,
-                    // id: id,
+                    title: name,
+                    //description: description,
+                    //id: id,
                     cover_date: cover_date,
-                    issue_number: issue_number
+                    issue_number: issue_number,
+                    read: read,
+                    owned: owned
                 }
             }),
             headers: new Headers({
@@ -33,13 +35,13 @@ const ComicCreate = (props) => {
         .then((data) => {
             console.log(data);
             setName('');
-            setDescription('');
+            //setDescription('');
             // setId('');
             setIssue_Number('');
             setCover_Date('');
             setRead('');
             setOwned('');
-            props.fetchComix();
+            //props.fetchComix();
         })
     }
 
@@ -66,15 +68,15 @@ const ComicCreate = (props) => {
                     <FormGroup>
                         <Label htmlForm="read" >Have you read it?</Label>
                         <Input type="select" name="read" value={read} onChange={(e) => setRead(e.target.value)}>
-                        <option value="true">yes</option>
-                        <option value="false">no</option>
+                        <option value="Yes">yes</option>
+                        <option value="No">no</option>
                         </Input>
                     </FormGroup>
                     <FormGroup>
                         <Label htmlForm="owned" >Do You Own It?</Label>
                         <Input type="select" name="owned" value={owned} onChange={(e) => setOwned(e.target.value)}>
-                        <option value="true">yes</option>
-                        <option value="false">no</option>
+                        <option value="Yes">yes</option>
+                        <option value="No">no</option>
                         </Input>
                     </FormGroup>
                     {/* <FormGroup>

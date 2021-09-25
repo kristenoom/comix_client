@@ -11,11 +11,14 @@ const ComicIndex = (props) => {
     const [comicToUpdate, setComicToUpdate] = useState({});
 
     const fetchComics = () => {
-        fetch(`${APIURL}/comic`, {
+        let sessionToken = localStorage.getItem('token');
+        console.log(sessionToken);
+        
+        fetch(`${APIURL}/comic/comixLog`, {
             method: 'GET',
             headers: new Headers({
                 'Content-Type': 'application/json',
-                'Authorization': props.token
+                'Authorization': sessionToken
             })
         })
             .then((res) => res.json())
@@ -54,7 +57,8 @@ const ComicIndex = (props) => {
                 <Col md="3">
                     <ComicCreate fetchComics={fetchComics} token={props.token} />
                 </Col>
-                <Col md="9">
+                <Col md="1">&nbsp;</Col>
+                <Col md="8">
                     <ComicTable comics={comics} editUpdateComic={editUpdateComic} updateOn={updateOn} fetchComics={fetchComics} token={props.token} />
                 </Col>
                 {updateActive ? <ComicEdit comicToUpdate={comicToUpdate} updateOff={updateOff} token={props.token} fetchComics={fetchComics} /> : <></>}
