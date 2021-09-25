@@ -14,7 +14,7 @@ const ComicCreate = (props) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        fetch(`${APIURL}/comic/`, {
+        fetch(`${APIURL}/comic/create`, {
             method: 'POST',
             body: JSON.stringify({
                 comic: {

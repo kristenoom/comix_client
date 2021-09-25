@@ -11,14 +11,14 @@ const HomeChild = (props) => {
                 return (
                     <div key={result.id}>
                     <CardColumns>
-                        <Card style={{ width: '300px' }}>
+                        <Card>
                             <CardBody>
                                 <CardTitle tag="h5" className="text"><strong className="text-muted">Title:</strong> {result.volume.name}</CardTitle>
                                 <CardSubtitle tag="h6" className="mb-2 text-muted">
                                     {/* <strong>Volume:</strong> {result.volume} */}
                                 </CardSubtitle>
                             </CardBody>
-                            <CardImg top src={result.image.small_url} alt={result.volume.name} />
+                            <CardImg top width="100%" src={result.image.small_url} alt={result.volume.name} />
                             <CardBody>
                                 <CardText className="text">
                                     <strong>Issue Number:</strong> {result.issue_number}<br />
