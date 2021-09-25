@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
 import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 import Footer from './components/Footer';
-import Auth from './auth/Auth'
 
 import { BrowserRouter as Router } from 'react-router-dom';
 

@@ -3,6 +3,7 @@ import { Container, Row, Col } from 'reactstrap';
 import ComicCreate from './ComicCreate';
 import ComicTable from './ComicTable';
 import ComicEdit from './ComicEdit';
+import APIURL from './helpers/environment';
 
 const ComicIndex = (props) => {
     const [comics, setComics] = useState([]);
@@ -10,7 +11,7 @@ const ComicIndex = (props) => {
     const [comicToUpdate, setComicToUpdate] = useState({});
 
     const fetchComics = () => {
-        fetch('http://localhost:3000/comic', {
+        fetch(`${APIURL}/comic`, {
             method: 'GET',
             headers: new Headers({
                 'Content-Type': 'application/json',
@@ -45,8 +46,8 @@ const ComicIndex = (props) => {
         <Container>
             <Row>
                 <Col md="12">
-                    <h1 className="heading">Comicbook Log</h1>
-                    <p className="text">Add a comicbook to your logbook here.</p>
+                    <h1 className="heading">Comic Book Log</h1>
+                    <p className="text">Add a comic book/graphic novel to your log here.</p>
                 </Col>
             </Row>
             <Row>

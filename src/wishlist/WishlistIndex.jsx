@@ -3,13 +3,14 @@ import { Container, Row, Col } from 'reactstrap';
 import WishlistCreate from './WishlistCreate';
 import WishlistTable from './WishlistTable';
 import WishlistEdit from './WishlistEdit';
+import APIURL from './helpers/environment';
 
 const WishlistIndex = (props) => {
     const [wishlists, setWishlists] = useState([]);
     const [updateActive, setUpdateActive] = useState(false);
     const [wishlistToUpdate, setWishlistToUpdate] = useState({});
     const fetchWishlists = () => {
-        fetch('http://localhost:3000/wishlist', {
+        fetch(`${APIURL}/wishlist`, {
             method: 'GET',
             headers: new Headers({
                 'Content-Type': 'application/json',
@@ -25,7 +26,7 @@ const WishlistIndex = (props) => {
     useEffect(() => {
         fetchWishlists();
     }, []);
-    
+
     const editUpdateWishlist = (wishlist) => {
         setWishlistToUpdate(wishlist);
         console.log(wishlist);
@@ -41,7 +42,7 @@ const WishlistIndex = (props) => {
             <Row>
                 <Col md="12">
                     <h1 className="heading">Wishlist</h1>
-                    <p className="text">Add a comic book to your wishlist here.</p>
+                    <p className="text">Add a comic book/graphic novel to your wishlist here.</p>
                 </Col>
             </Row>
             <Row>
