@@ -8,7 +8,7 @@ const Signup = (props) => {
  
     let handleSubmit = (e) => {
         e.preventDefault();
-        fetch(`${APIURL}/user/register`, {
+        fetch(`https://comicsroll.herokuapp.com/user/register`, {
             method: "POST",
             body: JSON.stringify({
                 user: {

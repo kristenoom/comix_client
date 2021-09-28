@@ -8,7 +8,7 @@ const Login = (props) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        fetch(`${APIURL}/user/login`, {
+        fetch(`https://comicsroll.herokuapp.com/user/login`, {
             method: "POST",
             body: JSON.stringify({
                 user: { username: username, password: password },

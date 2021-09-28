@@ -11,7 +11,7 @@ const ComicTable = (props) => {
                     <td>{comic.id}</td> 
                     <td>{comic.title}</td>
                     <td>{comic.issue_number}</td>
-                    <td>{comic.cover_date}</td>
+                    <td>{comic.issue_date}</td>
                     <td>{comic.read_status}</td>
                     <td>{comic.status}</td>
                     <td>

@@ -6,8 +6,8 @@ const WishlistEdit = (props) => {
     const [editName, setEditName] = useState(props.wishlistToUpdate.title);
     // const [editIssue_number, setEditIssue_Number] = useState(props.wishlistToUpdate.issue_number);
     // const [editCover_date, setEditCover_Date] = useState(props.wishlistToUpdate.cover_date);
-
-    console.log(props.token);
+  
+  console.log(props.token);
 
     const wishlistUpdate = (e, wishlist) => {
         e.preventDefault();

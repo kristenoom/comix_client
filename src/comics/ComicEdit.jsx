@@ -6,9 +6,9 @@ const ComicEdit = (props) => {
     const [editName, setEditName] = useState(props.comicToUpdate.title);
     //const [editId, setEditId] = useState(props.comicToUpdate.id);
     const [editIssue_number, setEditIssue_Number] = useState(props.comicToUpdate.issue_number);
-    const [editCover_date, setEditCover_Date] = useState(props.comicToUpdate.cover_date);
-    const [editRead, setEditRead] = useState(props.comicToUpdate.read);
-    const [editOwned, setEditOwned] = useState(props.comicToUpdate.owned);
+    const [editCover_date, setEditCover_Date] = useState(props.comicToUpdate.issue_date);
+    const [editRead, setEditRead] = useState(props.comicToUpdate.read_status);
+    const [editOwned, setEditOwned] = useState(props.comicToUpdate.status);
 
     console.log(props.token);
 
@@ -19,8 +19,8 @@ const ComicEdit = (props) => {
             body: JSON.stringify({
                     title: editName,
                     // id: editId,
-                    issue_date: editIssue_number,
-                    cover_date: editCover_date,
+                    issue_number: editIssue_number,
+                    issue_date: editCover_date,
                     read_status: editRead,
                     status: editOwned
             }),

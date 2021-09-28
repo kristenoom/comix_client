@@ -9,7 +9,6 @@ const ComicIndex = (props) => {
     const [comics, setComics] = useState([]);
     const [updateActive, setUpdateActive] = useState(false);
     const [comicToUpdate, setComicToUpdate] = useState({});
-
     const fetchComics = () => {
         let sessionToken = localStorage.getItem('token');
         console.log(sessionToken);

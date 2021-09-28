@@ -25,7 +25,7 @@ const ComicCreate = (props) => {
             }),
             headers: new Headers({
                 'Content-Type': 'application/json',
-                'Authorization': props.token
+                'Authorization': sessionToken
             })
         }) .then((res) => res.json())
         .then((data) => {
@@ -54,8 +54,8 @@ const ComicCreate = (props) => {
                         <Input name="id" value={id} onChange={(e) => setId(e.target.value)}/>
                     </FormGroup> */}
                     <FormGroup>
-                        <Label htmlForm="issue_number">Issue #</Label>
-                        <Input name="issue_number" value={issue_number} onChange={(e) => setIssue_Number(e.target.value)}/>
+                        <Label htmlForm="issue_number" >Issue date:</Label>
+                        <Input name="issue_number"onChange={(e) => setDescription(e.target.value)}/>
                     </FormGroup>
                     <FormGroup>
                         <Label htmlForm="cover_date" >Cover Date</Label>
@@ -80,7 +80,7 @@ const ComicCreate = (props) => {
                         <Label htmlForm="image" />
                         <Input name="image" value={image} onChange={(e) => setImage(e.target.value)}/>
                     </FormGroup> */}
-                    <Button type="submit" color="success">Add +</Button>
+                    <Button type="submit">Add +</Button>
                 </Form>
             </>
     )
